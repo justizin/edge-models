@@ -3,3 +3,7 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 fetch  qwen3.5-2b-q4 unsloth/Qwen3.5-2B-GGUF/Qwen3.5-2B-Q4_K_M.gguf
 fetch  qwen3.5-4b-q4 unsloth/Qwen3.5-4B-GGUF/Qwen3.5-4B-Q4_K_M.gguf
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+fetch  qwen3.5-9b-q4 unsloth/Qwen3.5-9B-GGUF/Qwen3.5-9B-Q4_K_M.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+fetch  qwen3.5-35b-a3b-q4 unsloth/Qwen3.5-35B-A3B-GGUF/Qwen3.5-35B-A3B-Q4_K_M.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
