@@ -35,7 +35,8 @@ def bench_table(rows):
     out = ["| host | model | quant/size | ngl | prompt tok/s (threads) | gen tok/s (threads) |", "|---|---|---|---|---|---|"]
     for (h, m, ngl), v in sorted(best.items()):
         pp = v.get("pp"); tg = v.get("tg"); mt = (pp or tg)[3]; sz = (pp or tg)[2]
-        out.append(f"| {h} | {m} | {mt.split(' ')[-1]} {sz:.2f} GB | {ngl} | " + (f"{pp[0]:.1f} (t={pp[1]})" if pp else "-") + " | " + (f"{tg[0]:.1f} (t={tg[1]})" if tg else "-") + " |")
+        q = re.sub(r"^\S+ \S+ ", "", mt).replace(" - Medium", "_M").replace(" - Small", "_S").replace(" - Large", "_L")
+        out.append(f"| {h} | {m} | {q} {sz:.2f} GB | {ngl} | " + (f"{pp[0]:.1f} (t={pp[1]})" if pp else "-") + " | " + (f"{tg[0]:.1f} (t={tg[1]})" if tg else "-") + " |")
     return "\n".join(out)
 def task_table(tasks):
     if not tasks: return "_no task runs yet_"

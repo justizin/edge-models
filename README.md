@@ -38,17 +38,29 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 
 | host | model | quant/size | ngl | prompt tok/s (threads) | gen tok/s (threads) |
 |---|---|---|---|---|---|
-| og128x01 | qwen2.5-coder-14b-q4 | Medium 8.98 GB | 0 | 10.5 (t=24) | 3.2 (t=24) |
-| og128x01 | qwen2.5-coder-7b-q4 | Medium 4.68 GB | 0 | 20.9 (t=24) | 6.1 (t=24) |
-| og128x01 | qwen3-coder-30b-a3b-q4 | Medium 17.66 GB | 0 | 41.2 (t=24) | 11.5 (t=24) |
+| og128x01 | gemma3-270m-q8 | Q8_0 0.29 GB | 0 | 577.8 (t=24) | 58.4 (t=12) |
+| og128x01 | gemma4-e2b-q4 | Q4_K_M 3.09 GB | 0 | 65.0 (t=24) | 15.5 (t=24) |
+| og128x01 | gemma4-e4b-q4 | Q4_K_M 4.96 GB | 0 | 31.5 (t=24) | 8.1 (t=24) |
+| og128x01 | granite4.1-3b-q4 | Q4_K_M 2.10 GB | 0 | 42.4 (t=24) | 12.8 (t=24) |
+| og128x01 | lfm2.5-350m-q8 | Q8_0 0.38 GB | 0 | 379.1 (t=24) | 56.4 (t=12) |
+| og128x01 | llama3.2-1b-q4 | Q4_K_M 0.80 GB | 0 | 140.3 (t=24) | 33.2 (t=24) |
+| og128x01 | qwen2.5-coder-0.5b-q8 | Q8_0 0.67 GB | 0 | 331.1 (t=24) | 47.4 (t=24) |
+| og128x01 | qwen2.5-coder-1.5b-q4 | Q4_K_M 1.11 GB | 0 | 99.5 (t=24) | 26.7 (t=24) |
+| og128x01 | qwen2.5-coder-14b-q4 | Q4_K_M 8.98 GB | 0 | 10.5 (t=24) | 3.2 (t=24) |
+| og128x01 | qwen2.5-coder-3b-q4 | Q4_K_M 2.10 GB | 0 | 48.3 (t=24) | 14.1 (t=24) |
+| og128x01 | qwen2.5-coder-7b-q4 | Q4_K_M 4.68 GB | 0 | 20.9 (t=24) | 6.1 (t=24) |
+| og128x01 | qwen3-coder-30b-a3b-q4 | Q4_K_M 17.66 GB | 0 | 41.2 (t=24) | 11.5 (t=24) |
+| og128x01 | qwen3.5-0.8b-q4_0 | Q4_0 0.55 GB | 0 | 186.1 (t=24) | 29.7 (t=24) |
 | og128x01 | qwen3.5-0.8b-q8 | Q8_0 0.82 GB | 0 | 150.8 (t=24) | 23.1 (t=24) |
+| og128x01 | qwen3.5-2b-q4 | Q4_K_M 1.27 GB | 0 | 79.1 (t=24) | 17.6 (t=24) |
+| og128x01 | qwen3.5-4b-q4 | Q4_K_M 2.73 GB | 0 | 31.2 (t=24) | 7.9 (t=24) |
+| og128x01 | qwen3.5-9b-q4 | Q4_K_M 5.67 GB | 0 | 17.3 (t=24) | 4.8 (t=24) |
+| og128x01 | smollm2-135m-q8 | Q8_0 0.14 GB | 0 | 629.5 (t=24) | 98.5 (t=12) |
+| og128x01 | smollm2-360m-q8 | Q8_0 0.38 GB | 0 | 278.7 (t=24) | 45.6 (t=12) |
 
 ### Task scores
 
-| host | task | model | score | n | median latency s | notes |
-|---|---|---|---|---|---|---|
-| og128x01 | coding | qwen3.5-0.8b-q8 | 0.0 | 2 | 19.95 | smoke |
-| og128x01 | ids | qwen3.5-0.8b-q8 | 0.5 | 6 | 3.994 | smoke |
+_no task runs yet_
 <!-- results:end -->
 
 ## Findings and recommendations
