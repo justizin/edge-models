@@ -1,0 +1,191 @@
+{
+ "score": 0.955,
+ "n": 22,
+ "passed": 21,
+ "median_latency_s": 6.46,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 12.26,
+   "out_tokens": 123
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.1,
+   "out_tokens": 77
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 6.71,
+   "out_tokens": 70
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.25,
+   "out_tokens": 55
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 6.43,
+   "out_tokens": 66
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.26,
+   "out_tokens": 42
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 18.39,
+   "out_tokens": 210
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.23,
+   "out_tokens": 85
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.28,
+   "out_tokens": 48
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.01,
+   "out_tokens": 92
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.2,
+   "out_tokens": 43
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.09,
+   "out_tokens": 86
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 6.49,
+   "out_tokens": 72
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.17,
+   "out_tokens": 46
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 10.99,
+   "out_tokens": 121
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.46,
+   "out_tokens": 43
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.9,
+   "out_tokens": 104
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.28,
+   "out_tokens": 28
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 5.88,
+   "out_tokens": 52
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 6.59,
+   "out_tokens": 58
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 4.81,
+   "out_tokens": 48
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 4.89,
+   "out_tokens": 48
+  }
+ ],
+ "task": "coding",
+ "model_id": "granite4.1-3b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "",
+ "date": "2026-09-21T07:41:08Z"
+}

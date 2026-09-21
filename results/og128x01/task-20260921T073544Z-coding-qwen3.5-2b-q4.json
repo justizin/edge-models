@@ -1,0 +1,191 @@
+{
+ "score": 0.864,
+ "n": 22,
+ "passed": 19,
+ "median_latency_s": 7.84,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.42,
+   "out_tokens": 156
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.3,
+   "out_tokens": 133
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 10.5,
+   "out_tokens": 171
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 6.32,
+   "out_tokens": 95
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.95,
+   "out_tokens": 124
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.54,
+   "out_tokens": 114
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 14.42,
+   "out_tokens": 222
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.67,
+   "out_tokens": 166
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 15.11,
+   "out_tokens": 242
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.23,
+   "out_tokens": 161
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.19,
+   "out_tokens": 77
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.13,
+   "out_tokens": 131
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.55,
+   "out_tokens": 139
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.42,
+   "out_tokens": 68
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 26.6,
+   "out_tokens": 438
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.73,
+   "out_tokens": 121
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.21,
+   "out_tokens": 115
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 6.18,
+   "out_tokens": 79
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 5.4,
+   "out_tokens": 72
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 5.12,
+   "out_tokens": 67
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 4.31,
+   "out_tokens": 57
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 4.31,
+   "out_tokens": 57
+  }
+ ],
+ "task": "coding",
+ "model_id": "qwen3.5-2b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "",
+ "date": "2026-09-21T07:35:44Z"
+}

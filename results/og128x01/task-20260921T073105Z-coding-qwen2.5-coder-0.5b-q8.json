@@ -1,0 +1,191 @@
+{
+ "score": 0.545,
+ "n": 22,
+ "passed": 12,
+ "median_latency_s": 1.9,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 3.19,
+   "out_tokens": 116
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 3.2,
+   "out_tokens": 144
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.05,
+   "out_tokens": 140
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 1.44,
+   "out_tokens": 59
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: too many values to unpack (expected 2)",
+   "s": 1.44,
+   "out_tokens": 63
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 1.68,
+   "out_tokens": 69
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.77,
+   "out_tokens": 172
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 3.47,
+   "out_tokens": 156
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 4.86,
+   "out_tokens": 212
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.87,
+   "out_tokens": 180
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 1.56,
+   "out_tokens": 70
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 2.81,
+   "out_tokens": 127
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 1.54,
+   "out_tokens": 70
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 0.93,
+   "out_tokens": 43
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: unterminated string literal (detected at line 8)",
+   "s": 11.43,
+   "out_tokens": 512
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 2.12,
+   "out_tokens": 95
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 2.35,
+   "out_tokens": 109
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 1.52,
+   "out_tokens": 66
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 1.42,
+   "out_tokens": 56
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 1.54,
+   "out_tokens": 62
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 1.04,
+   "out_tokens": 43
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 1.01,
+   "out_tokens": 43
+  }
+ ],
+ "task": "coding",
+ "model_id": "qwen2.5-coder-0.5b-q8",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "",
+ "date": "2026-09-21T07:31:05Z"
+}

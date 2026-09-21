@@ -91,3 +91,739 @@
        0p  128g  t=24  ngl=0       4.84 tok/s  (qwen35 9B Q4_K - Medium 5.67GB)
 ### clean t=12 rerun of 7B/14B 2026-09-21T07:16:56Z
 == qwen2.5-coder-7b-q4  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0       8.78 tok/s  (qwen2 7B Q4_K - Medium 4.68GB)
+       0p  128g  t=12  ngl=0       5.64 tok/s  (qwen2 7B Q4_K - Medium 4.68GB)
+== qwen2.5-coder-14b-q4  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0       4.37 tok/s  (qwen2 14B Q4_K - Medium 8.98GB)
+       0p  128g  t=12  ngl=0       2.93 tok/s  (qwen2 14B Q4_K - Medium 8.98GB)
+### coding task 2026-09-21T07:27:52Z
+== coding on qwen3.5-0.8b-q8 via http://127.0.0.1:56601
+  FAIL rle                       5.8s TypeError: can only concatenate str (not "int") to str
+  FAIL is_balanced               7.7s AssertionError
+  FAIL word_freq                 4.0s AssertionError
+  PASS chunk                     5.7s 
+  PASS parse_kv                  4.9s 
+  FAIL second_largest            4.7s AssertionError
+  FAIL roman                     7.2s AssertionError
+  FAIL ip_valid                  5.7s AssertionError
+  FAIL cidr_contains            20.9s AssertionError
+  FAIL merge_intervals           6.8s AssertionError
+  PASS flatten                   3.3s 
+  FAIL caesar                    6.8s AssertionError
+  PASS median                    5.3s 
+  PASS dedupe_keep_order         3.0s 
+  FAIL parse_syslog             11.3s IndexError: list index out of range
+  PASS top_n                     4.6s 
+  PASS bin_search                5.0s 
+  FAIL hex_dump                  3.8s AssertionError
+  PASS fix_avg                   2.9s 
+  PASS fix_offbyone              3.2s 
+  FAIL fix_mutable_default       2.6s AssertionError
+  FAIL fix_strip_prefix          2.3s AssertionError
+score=0.409 n=22 median_latency=5.0s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T073004Z-coding-qwen3.5-0.8b-q8.json
+== coding on qwen2.5-coder-0.5b-q8 via http://127.0.0.1:59641
+  FAIL rle                       3.2s AssertionError
+  FAIL is_balanced               3.2s SyntaxError: invalid syntax
+  PASS word_freq                 3.0s 
+  PASS chunk                     1.4s 
+  FAIL parse_kv                  1.4s ValueError: too many values to unpack (expected 2)
+  FAIL second_largest            1.7s AssertionError
+  PASS roman                     3.8s 
+  FAIL ip_valid                  3.5s AssertionError
+  FAIL cidr_contains             4.9s AssertionError
+  PASS merge_intervals           3.9s 
+  PASS flatten                   1.6s 
+  PASS caesar                    2.8s 
+  PASS median                    1.5s 
+  FAIL dedupe_keep_order         0.9s AssertionError
+  FAIL parse_syslog             11.4s SyntaxError: unterminated string literal (detected at line 8
+  PASS top_n                     2.1s 
+  PASS bin_search                2.3s 
+  PASS hex_dump                  1.5s 
+  PASS fix_avg                   1.4s 
+  PASS fix_offbyone              1.5s 
+  FAIL fix_mutable_default       1.0s AssertionError
+  FAIL fix_strip_prefix          1.0s AssertionError
+score=0.545 n=22 median_latency=1.9s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T073105Z-coding-qwen2.5-coder-0.5b-q8.json
+== coding on qwen2.5-coder-1.5b-q4 via http://127.0.0.1:36463
+  PASS rle                       5.2s 
+  PASS is_balanced               3.6s 
+  PASS word_freq                 2.3s 
+  PASS chunk                     1.8s 
+  FAIL parse_kv                  2.3s NameError: name 'kv' is not defined
+  PASS second_largest            2.1s 
+  PASS roman                     7.5s 
+  PASS ip_valid                  4.0s 
+  FAIL cidr_contains             4.2s AssertionError
+  PASS merge_intervals           6.0s 
+  PASS flatten                   2.2s 
+  PASS caesar                    3.8s 
+  PASS median                    3.1s 
+  PASS dedupe_keep_order         2.1s 
+  FAIL parse_syslog              6.8s TypeError: 'NoneType' object is not subscriptable
+  PASS top_n                     2.0s 
+  PASS bin_search                3.9s 
+  PASS hex_dump                  1.8s 
+  PASS fix_avg                   3.4s 
+  FAIL fix_offbyone              3.2s AssertionError
+  FAIL fix_mutable_default       2.5s AssertionError
+  FAIL fix_strip_prefix          2.1s AssertionError
+score=0.727 n=22 median_latency=3.11s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T073224Z-coding-qwen2.5-coder-1.5b-q4.json
+== coding on qwen3.5-2b-q4 via http://127.0.0.1:44467
+  PASS rle                      10.4s 
+  PASS is_balanced               8.3s 
+  FAIL word_freq                10.5s AssertionError
+  PASS chunk                     6.3s 
+  PASS parse_kv                  7.9s 
+  PASS second_largest            7.5s 
+  PASS roman                    14.4s 
+  PASS ip_valid                 10.7s 
+  PASS cidr_contains            15.1s 
+  PASS merge_intervals          10.2s 
+  PASS flatten                   5.2s 
+  PASS caesar                    9.1s 
+  PASS median                    8.6s 
+  PASS dedupe_keep_order         4.4s 
+  FAIL parse_syslog             26.6s AssertionError
+  PASS top_n                     7.7s 
+  PASS bin_search                7.2s 
+  PASS hex_dump                  6.2s 
+  PASS fix_avg                   5.4s 
+  PASS fix_offbyone              5.1s 
+  FAIL fix_mutable_default       4.3s AssertionError
+  PASS fix_strip_prefix          4.3s 
+score=0.864 n=22 median_latency=7.84s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T073544Z-coding-qwen3.5-2b-q4.json
+== coding on qwen2.5-coder-3b-q4 via http://127.0.0.1:34969
+  PASS rle                       9.4s 
+  PASS is_balanced               7.3s 
+  PASS word_freq                 9.0s 
+  PASS chunk                     5.1s 
+  FAIL parse_kv                  5.5s AssertionError
+  PASS second_largest            5.4s 
+  PASS roman                    14.2s 
+  PASS ip_valid                  7.3s 
+  PASS cidr_contains             5.0s 
+  PASS merge_intervals           7.6s 
+  PASS flatten                   6.0s 
+  PASS caesar                   10.2s 
+  PASS median                    5.7s 
+  PASS dedupe_keep_order         3.3s 
+  FAIL parse_syslog             18.3s TypeError: 'NoneType' object is not subscriptable
+  PASS top_n                     9.0s 
+  PASS bin_search                8.5s 
+  PASS hex_dump                  3.6s 
+  PASS fix_avg                   6.6s 
+  PASS fix_offbyone              6.6s 
+  PASS fix_mutable_default       4.7s 
+  PASS fix_strip_prefix          4.7s 
+score=0.909 n=22 median_latency=6.56s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T073830Z-coding-qwen2.5-coder-3b-q4.json
+== coding on granite4.1-3b-q4 via http://127.0.0.1:45705
+  PASS rle                      12.3s 
+  PASS is_balanced               7.1s 
+  PASS word_freq                 6.7s 
+  PASS chunk                     5.3s 
+  PASS parse_kv                  6.4s 
+  PASS second_largest            4.3s 
+  PASS roman                    18.4s 
+  PASS ip_valid                  8.2s 
+  PASS cidr_contains             5.3s 
+  PASS merge_intervals           9.0s 
+  PASS flatten                   4.2s 
+  PASS caesar                    8.1s 
+  PASS median                    6.5s 
+  PASS dedupe_keep_order         4.2s 
+  FAIL parse_syslog             11.0s AssertionError
+  PASS top_n                     4.5s 
+  PASS bin_search                8.9s 
+  PASS hex_dump                  3.3s 
+  PASS fix_avg                   5.9s 
+  PASS fix_offbyone              6.6s 
+  PASS fix_mutable_default       4.8s 
+  PASS fix_strip_prefix          4.9s 
+score=0.955 n=22 median_latency=6.46s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T074108Z-coding-granite4.1-3b-q4.json
+== coding on qwen3.5-4b-q4 via http://127.0.0.1:36899
+  PASS rle                      20.1s 
+  PASS is_balanced              17.4s 
+  PASS word_freq                17.3s 
+  PASS chunk                    12.3s 
+  PASS parse_kv                 17.1s 
+  PASS second_largest           13.9s 
+  PASS roman                    30.3s 
+  PASS ip_valid                 22.2s 
+  PASS cidr_contains            18.7s 
+  PASS merge_intervals          24.2s 
+  PASS flatten                  11.1s 
+  PASS caesar                   25.0s 
+  PASS median                   17.3s 
+  PASS dedupe_keep_order         9.8s 
+  FAIL parse_syslog             35.0s AssertionError
+  PASS top_n                    12.8s 
+  PASS bin_search               16.0s 
+  PASS hex_dump                 10.7s 
+  PASS fix_avg                  12.0s 
+  PASS fix_offbyone             11.8s 
+  PASS fix_mutable_default      10.1s 
+  PASS fix_strip_prefix          9.8s 
+score=0.955 n=22 median_latency=16.57s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T074728Z-coding-qwen3.5-4b-q4.json
+== coding on qwen2.5-coder-7b-q4 via http://127.0.0.1:56713
+  PASS rle                      19.8s 
+  PASS is_balanced              15.0s 
+  PASS word_freq                 9.9s 
+  PASS chunk                    12.1s 
+  FAIL parse_kv                  9.2s ValueError: not enough values to unpack (expected 2, got 1)
+  PASS second_largest           10.7s 
+  PASS roman                    31.3s 
+  PASS ip_valid                 15.7s 
+  PASS cidr_contains            10.3s 
+  PASS merge_intervals          21.6s 
+  PASS flatten                   9.6s 
+  PASS caesar                   21.7s 
+  PASS median                   13.2s 
+  PASS dedupe_keep_order         9.4s 
+  FAIL parse_syslog             29.2s AssertionError
+  PASS top_n                     9.0s 
+  PASS bin_search               21.4s 
+  PASS hex_dump                  7.9s 
+  PASS fix_avg                  15.4s 
+  PASS fix_offbyone             14.4s 
+  PASS fix_mutable_default      11.5s 
+  PASS fix_strip_prefix         10.9s 
+score=0.909 n=22 median_latency=12.68s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T075301Z-coding-qwen2.5-coder-7b-q4.json
+== coding on qwen3.5-9b-q4 via http://127.0.0.1:34977
+  PASS rle                      32.4s 
+  PASS is_balanced              25.0s 
+  FAIL word_freq                16.8s AssertionError
+  PASS chunk                    21.1s 
+  PASS parse_kv                 19.0s 
+  PASS second_largest           23.3s 
+  PASS roman                    50.2s 
+  PASS ip_valid                 40.7s 
+  PASS cidr_contains            29.2s 
+  PASS merge_intervals          26.6s 
+  PASS flatten                  15.0s 
+  PASS caesar                   25.3s 
+  PASS median                   25.8s 
+  PASS dedupe_keep_order        14.9s 
+  FAIL parse_syslog             37.8s TypeError: 'NoneType' object is not subscriptable
+  PASS top_n                    13.0s 
+  PASS bin_search               27.6s 
+  PASS hex_dump                 11.1s 
+  PASS fix_avg                  21.0s 
+  PASS fix_offbyone             17.2s 
+  PASS fix_mutable_default      17.1s 
+  PASS fix_strip_prefix         12.8s 
+score=0.909 n=22 median_latency=22.19s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T080149Z-coding-qwen3.5-9b-q4.json
+== coding on qwen3-coder-30b-a3b-q4 via http://127.0.0.1:55867
+  PASS rle                      13.4s 
+  PASS is_balanced               8.6s 
+  PASS word_freq                15.0s 
+  PASS chunk                     5.9s 
+  PASS parse_kv                  9.7s 
+  PASS second_largest            8.1s 
+  PASS roman                    19.9s 
+  PASS ip_valid                 13.7s 
+  PASS cidr_contains            10.3s 
+  PASS merge_intervals          14.9s 
+  PASS flatten                   6.5s 
+  PASS caesar                    9.0s 
+  PASS median                   10.6s 
+  PASS dedupe_keep_order         5.7s 
+  FAIL parse_syslog             15.8s AssertionError
+  PASS top_n                     6.2s 
+  PASS bin_search                9.7s 
+  PASS hex_dump                  6.6s 
+  PASS fix_avg                   7.3s 
+  PASS fix_offbyone              7.1s 
+  PASS fix_mutable_default       5.5s 
+  PASS fix_strip_prefix          5.5s 
+score=0.955 n=22 median_latency=8.79s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T080529Z-coding-qwen3-coder-30b-a3b-q4.json
+### ids task 2026-09-21T08:05:29Z
+== ids on gemma3-270m-q8 via http://127.0.0.1:50229
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+score=0.558 n=163 median_latency=0.281s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T080620Z-ids-gemma3-270m-q8.json
+== ids on lfm2.5-350m-q8 via http://127.0.0.1:32925
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+score=0.558 n=163 median_latency=0.464s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T080738Z-ids-lfm2.5-350m-q8.json
+== ids on qwen3.5-0.8b-q8 via http://127.0.0.1:33475
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+score=0.639 n=163 median_latency=0.633s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T080927Z-ids-qwen3.5-0.8b-q8.json
+== ids on llama3.2-1b-q4 via http://127.0.0.1:43617
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS cron                   truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS sudo-ok                truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS web-ok                 truth=0 pred=1 raw='MALICIOUS'
+  MISS system                 truth=0 pred=1 raw='MALICIOUS'
+score=0.542 n=163 median_latency=0.523s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T081058Z-ids-llama3.2-1b-q4.json
+== ids on qwen3.5-2b-q4 via http://127.0.0.1:47727
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+score=0.777 n=163 median_latency=1.925s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T082214Z-ids-qwen3.5-2b-q4.json
+== ids on gemma4-e2b-q4 via http://127.0.0.1:57395
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS port-scan              truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS ssh-bruteforce         truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+score=0.584 n=163 median_latency=9.719s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T084725Z-ids-gemma4-e2b-q4.json
+== ids on qwen3.5-4b-q4 via http://127.0.0.1:37309
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+score=0.916 n=163 median_latency=3.641s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T090912Z-ids-qwen3.5-4b-q4.json
+== ids on gemma4-e4b-q4 via http://127.0.0.1:50939
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS path-traversal-scan    truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+score=0.882 n=163 median_latency=3.338s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T092755Z-ids-gemma4-e4b-q4.json
+== ids on qwen3.5-9b-q4 via http://127.0.0.1:46353
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+score=0.952 n=163 median_latency=16.314s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T101056Z-ids-qwen3.5-9b-q4.json
+== ids on qwen3-coder-30b-a3b-q4 via http://127.0.0.1:50581
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS ssh-typo               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+score=0.881 n=163 median_latency=2.354s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260921T102912Z-ids-qwen3-coder-30b-a3b-q4.json
+### done 2026-09-21T10:29:12Z
+1 hosts, 94 bench rows, 20 task runs -> README.md

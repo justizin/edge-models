@@ -1,0 +1,191 @@
+{
+ "score": 0.909,
+ "n": 22,
+ "passed": 20,
+ "median_latency_s": 6.56,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.42,
+   "out_tokens": 103
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.26,
+   "out_tokens": 87
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.02,
+   "out_tokens": 112
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.1,
+   "out_tokens": 59
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 5.53,
+   "out_tokens": 63
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.44,
+   "out_tokens": 55
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 14.23,
+   "out_tokens": 186
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.35,
+   "out_tokens": 86
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.03,
+   "out_tokens": 50
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.6,
+   "out_tokens": 96
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.96,
+   "out_tokens": 73
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.2,
+   "out_tokens": 126
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 5.72,
+   "out_tokens": 70
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.26,
+   "out_tokens": 39
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'NoneType' object is not subscriptable",
+   "s": 18.29,
+   "out_tokens": 233
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.0,
+   "out_tokens": 113
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.46,
+   "out_tokens": 109
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.63,
+   "out_tokens": 33
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 6.57,
+   "out_tokens": 67
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 6.55,
+   "out_tokens": 62
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 4.73,
+   "out_tokens": 53
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 4.68,
+   "out_tokens": 53
+  }
+ ],
+ "task": "coding",
+ "model_id": "qwen2.5-coder-3b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "",
+ "date": "2026-09-21T07:38:30Z"
+}

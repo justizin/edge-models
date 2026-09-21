@@ -60,7 +60,28 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 
 ### Task scores
 
-_no task runs yet_
+| host | task | model | score | n | median latency s | notes |
+|---|---|---|---|---|---|---|
+| og128x01 | coding | qwen3.5-0.8b-q8 | 0.409 | 22 | 5.0 |  |
+| og128x01 | coding | qwen2.5-coder-0.5b-q8 | 0.545 | 22 | 1.9 |  |
+| og128x01 | coding | qwen2.5-coder-1.5b-q4 | 0.727 | 22 | 3.11 |  |
+| og128x01 | coding | qwen3.5-2b-q4 | 0.864 | 22 | 7.84 |  |
+| og128x01 | coding | qwen2.5-coder-3b-q4 | 0.909 | 22 | 6.56 |  |
+| og128x01 | coding | granite4.1-3b-q4 | 0.955 | 22 | 6.46 |  |
+| og128x01 | coding | qwen3.5-4b-q4 | 0.955 | 22 | 16.57 |  |
+| og128x01 | coding | qwen2.5-coder-7b-q4 | 0.909 | 22 | 12.68 |  |
+| og128x01 | coding | qwen3.5-9b-q4 | 0.909 | 22 | 22.19 |  |
+| og128x01 | coding | qwen3-coder-30b-a3b-q4 | 0.955 | 22 | 8.79 |  |
+| og128x01 | ids | gemma3-270m-q8 | 0.558 | 163 | 0.281 |  |
+| og128x01 | ids | lfm2.5-350m-q8 | 0.558 | 163 | 0.464 |  |
+| og128x01 | ids | qwen3.5-0.8b-q8 | 0.639 | 163 | 0.633 |  |
+| og128x01 | ids | llama3.2-1b-q4 | 0.542 | 163 | 0.523 |  |
+| og128x01 | ids | qwen3.5-2b-q4 | 0.777 | 163 | 1.925 |  |
+| og128x01 | ids | gemma4-e2b-q4 | 0.584 | 163 | 9.719 |  |
+| og128x01 | ids | qwen3.5-4b-q4 | 0.916 | 163 | 3.641 |  |
+| og128x01 | ids | gemma4-e4b-q4 | 0.882 | 163 | 3.338 |  |
+| og128x01 | ids | qwen3.5-9b-q4 | 0.952 | 163 | 16.314 |  |
+| og128x01 | ids | qwen3-coder-30b-a3b-q4 | 0.881 | 163 | 2.354 |  |
 <!-- results:end -->
 
 ## Findings and recommendations

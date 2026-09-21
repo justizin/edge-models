@@ -1,0 +1,1181 @@
+{
+ "score": 0.558,
+ "n": 163,
+ "metrics": {
+  "precision": 0.387,
+  "recall": 1.0,
+  "f1": 0.558,
+  "tp": 63,
+  "fp": 100,
+  "fn": 0
+ },
+ "unparsed": 0,
+ "median_latency_s": 0.281,
+ "per_family_acc": {
+  "cron": 0.0,
+  "ssh-typo": 0.0,
+  "sudo-download-exec": 1.0,
+  "ssh-bruteforce": 1.0,
+  "root-login-external": 1.0,
+  "sudo-ok": 0.0,
+  "system": 0.0,
+  "web-ok": 0.0,
+  "path-traversal-scan": 1.0,
+  "fw-noise": 0.0,
+  "sqli": 1.0,
+  "reverse-shell-cron": 1.0,
+  "uid0-user-added": 1.0,
+  "ssh-ok": 0.0,
+  "port-scan": 1.0
+ },
+ "items": [
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.34
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.591
+  },
+  {
+   "family": "sudo-download-exec",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.286
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.321
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.257
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.287
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.267
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.288
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.231
+  },
+  {
+   "family": "sudo-download-exec",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.333
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.433
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.286
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.276
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.284
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.253
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.297
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.27
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.325
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.287
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.247
+  },
+  {
+   "family": "reverse-shell-cron",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.269
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.346
+  },
+  {
+   "family": "uid0-user-added",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.256
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.296
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.317
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.395
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.284
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.284
+  },
+  {
+   "family": "uid0-user-added",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.254
+  },
+  {
+   "family": "reverse-shell-cron",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.267
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.229
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.286
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.248
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.304
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.255
+  },
+  {
+   "family": "reverse-shell-cron",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.263
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.267
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.273
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.291
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.253
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.316
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.322
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.341
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.251
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.236
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.246
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.245
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.23
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.282
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.296
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.266
+  },
+  {
+   "family": "port-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.319
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.353
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.292
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.237
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.269
+  },
+  {
+   "family": "port-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.299
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.263
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.296
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.281
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.303
+  },
+  {
+   "family": "sudo-download-exec",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.276
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.271
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.261
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.296
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.275
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.292
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.372
+  },
+  {
+   "family": "port-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.315
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.256
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.241
+  },
+  {
+   "family": "port-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.279
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.271
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.256
+  },
+  {
+   "family": "uid0-user-added",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.37
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.261
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.275
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.265
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.264
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.289
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.367
+  },
+  {
+   "family": "port-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.38
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.341
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.274
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.25
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.273
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.29
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.298
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.287
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.272
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.312
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.262
+  },
+  {
+   "family": "reverse-shell-cron",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.269
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.232
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.317
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.312
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.266
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.252
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.262
+  },
+  {
+   "family": "cron",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.244
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.28
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.301
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.287
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.255
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.293
+  },
+  {
+   "family": "port-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.508
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.609
+  },
+  {
+   "family": "uid0-user-added",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.302
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.246
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.323
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.291
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.263
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.387
+  },
+  {
+   "family": "sudo-download-exec",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.308
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.229
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.244
+  },
+  {
+   "family": "sudo-download-exec",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.377
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.302
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.254
+  },
+  {
+   "family": "reverse-shell-cron",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.274
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.322
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.276
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.285
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.269
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.277
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.281
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.248
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.38
+  },
+  {
+   "family": "ssh-typo",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.271
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.265
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.27
+  },
+  {
+   "family": "uid0-user-added",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.282
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.262
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.285
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.286
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.278
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.276
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.262
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.304
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.248
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.404
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.357
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.26
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.356
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.344
+  },
+  {
+   "family": "path-traversal-scan",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.278
+  },
+  {
+   "family": "ssh-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.274
+  },
+  {
+   "family": "fw-noise",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.291
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.311
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.269
+  },
+  {
+   "family": "sudo-download-exec",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.34
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.289
+  },
+  {
+   "family": "sudo-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.262
+  },
+  {
+   "family": "sqli",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.318
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.298
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.286
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.405
+  },
+  {
+   "family": "ssh-bruteforce",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.297
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.27
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.276
+  },
+  {
+   "family": "root-login-external",
+   "label": 1,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.261
+  },
+  {
+   "family": "web-ok",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.321
+  },
+  {
+   "family": "system",
+   "label": 0,
+   "pred": 1,
+   "raw": "MALICIOUS",
+   "s": 0.249
+  }
+ ],
+ "task": "ids",
+ "model_id": "gemma3-270m-q8",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "",
+ "date": "2026-09-21T08:06:20Z"
+}
