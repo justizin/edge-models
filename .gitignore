@@ -2,3 +2,5 @@
 *.err
 __pycache__/
 *.part
+build-*/
+deploy/static/out/
