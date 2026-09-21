@@ -1,0 +1,20 @@
+### small ladder bench 2026-09-21T06:47:14Z
+== smollm2-135m-q8  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0     375.47 tok/s  (llama 256M Q8_0 0.14GB)
+       0p  128g  t=12  ngl=0      98.51 tok/s  (llama 256M Q8_0 0.14GB)
+== smollm2-360m-q8  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0     215.13 tok/s  (llama 3B Q8_0 0.38GB)
+       0p  128g  t=12  ngl=0      42.71 tok/s  (llama 3B Q8_0 0.38GB)
+== gemma3-270m-q8  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0     551.33 tok/s  (gemma3 270M Q8_0 0.29GB)
+       0p  128g  t=12  ngl=0      58.38 tok/s  (gemma3 270M Q8_0 0.29GB)
+== lfm2.5-350m-q8  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0     245.81 tok/s  (lfm2 350M Q8_0 0.38GB)
+       0p  128g  t=12  ngl=0      56.43 tok/s  (lfm2 350M Q8_0 0.38GB)
+== qwen2.5-coder-0.5b-q8  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0     229.06 tok/s  (qwen2 1B Q8_0 0.67GB)
+       0p  128g  t=12  ngl=0      40.52 tok/s  (qwen2 1B Q8_0 0.67GB)
+== qwen3.5-0.8b-q4_0  t=12 ngl=0 p=512 n=128 r=2
+     512p    0g  t=12  ngl=0     120.85 tok/s  (qwen35 0.8B Q4_0 0.55GB)
+       0p  128g  t=12  ngl=0      21.80 tok/s  (qwen35 0.8B Q4_0 0.55GB)
+== llama3.2-1b-q4  t=12 ngl=0 p=512 n=128 r=2
