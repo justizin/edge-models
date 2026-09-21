@@ -1,0 +1,16 @@
+# User unit: ~/.config/systemd/user/llama-coder.service
+# systemctl --user daemon-reload && systemctl --user enable --now llama-coder
+# OpenAI-compatible endpoint on http://127.0.0.1:8080/v1 for Continue / llama.vim / Zed.
+[Unit]
+Description=llama-server coding assistant (edge-models)
+After=network.target
+
+[Service]
+Environment=LLAMA_BIN=%h/src/llama.cpp/build/bin
+Environment=MODEL=%h/.cache/huggingface/hub/models--unsloth--Qwen3-Coder-30B-A3B-Instruct-GGUF/snapshots/b17cb02dd882d5b6ab62fc777ad2995f19668350/Qwen3-Coder-30B-A3B-Instruct-UD-Q4_K_XL.gguf
+ExecStart=/bin/sh -c 'exec $LLAMA_BIN/llama-server -m $MODEL --host 127.0.0.1 --port 8080 -t 12 -c 16384 --jinja -np 1'
+Restart=on-failure
+Nice=5
+
+[Install]
+WantedBy=default.target

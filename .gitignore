@@ -1,0 +1,4 @@
+.venv/
+*.err
+__pycache__/
+*.part

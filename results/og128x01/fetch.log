@@ -1,0 +1,23 @@
+fetch  smollm2-135m-q8 HuggingFaceTB/SmolLM2-135M-Instruct-GGUF/smollm2-135m-instruct-q8_0.gguf
+Error: Repository not found.
+If the repo is private, make sure you are authenticated and your token has the required permissions.
+If the repo does not exist, create it with: hf repos create <repo_id>
+Hint: set HF_DEBUG=1 as environment variable for full traceback.
+FAILED smollm2-135m-q8 smollm2-135m-instruct-q8_0.gguf
+fetch  smollm2-360m-q8 HuggingFaceTB/SmolLM2-360M-Instruct-GGUF/smollm2-360m-instruct-q8_0.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+fetch  qwen2.5-coder-0.5b-q8 Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF/qwen2.5-coder-0.5b-instruct-q8_0.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+have   qwen3.5-0.8b-q8
+fetch  llama3.2-1b-q4 bartowski/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q4_K_M.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+fetch  qwen2.5-coder-1.5b-q4 Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+fetch  qwen3-1.7b-q4 Qwen/Qwen3-1.7B-GGUF/Qwen3-1.7B-Q4_K_M.gguf
+Error: File not found in repository.
+URL: https://huggingface.co/Qwen/Qwen3-1.7B-GGUF/resolve/main/Qwen3-1.7B-Q4_K_M.gguf
+Hint: set HF_DEBUG=1 as environment variable for full traceback.
+FAILED qwen3-1.7b-q4 Qwen3-1.7B-Q4_K_M.gguf
+fetch  qwen2.5-coder-3b-q4 Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/qwen2.5-coder-3b-instruct-q4_k_m.gguf
+fetch  qwen3-4b-q4 Qwen/Qwen3-4B-GGUF/Qwen3-4B-Q4_K_M.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
