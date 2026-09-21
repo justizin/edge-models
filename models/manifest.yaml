@@ -1,5 +1,6 @@
 # Model ladder. tier = param-size band. files: all shards, first shard is passed to llama.cpp.
-# tags drive which tasks/tiers a model is benched on. 'cached' = already in HF cache on og128x01 at project start.
+# tags drive which tasks/tiers a model is benched on. 'cached' = in HF cache at project start; 'quantcmp' = quant-format comparison rows.
+# Refreshed 2026-09-20 from docs/research-2026-09-20.md.
 models:
 - id: smollm2-135m-q8
   tier: 0.1-0.4B
@@ -13,6 +14,32 @@ models:
   - tiny
   - pi-zero
   - switch
+- id: gemma3-270m-q8
+  tier: 0.1-0.4B
+  params_b: 0.27
+  repo: unsloth/gemma-3-270m-it-GGUF
+  files:
+  - gemma-3-270m-it-Q8_0.gguf
+  quant: Q8_0
+  tags:
+  - general
+  - tiny
+  - pi-zero
+  - switch
+  - pi4
+- id: lfm2.5-350m-q8
+  tier: 0.1-0.4B
+  params_b: 0.35
+  repo: LiquidAI/LFM2.5-350M-GGUF
+  files:
+  - LFM2.5-350M-Q8_0.gguf
+  quant: Q8_0
+  tags:
+  - general
+  - tiny
+  - ids
+  - switch
+  - pi4
 - id: smollm2-360m-q8
   tier: 0.1-0.4B
   params_b: 0.36
@@ -35,6 +62,18 @@ models:
   - coding
   - switch
   - pi
+- id: qwen3.5-0.8b-q4_0
+  tier: 0.5-1B
+  params_b: 0.8
+  repo: ggml-org/Qwen3.5-0.8B-GGUF
+  files:
+  - Qwen3.5-0.8B-Q4_0.gguf
+  quant: Q4_0
+  tags:
+  - quantcmp
+  - pi
+  - gpu3g
+  - switch
 - id: qwen3.5-0.8b-q8
   tier: 0.5-1B
   params_b: 0.8
@@ -85,6 +124,31 @@ models:
   - pi
   - ios
   - switch8g
+- id: gemma4-e2b-q4
+  tier: 1.5-2B
+  params_b: 2.3
+  repo: unsloth/gemma-4-E2B-it-GGUF
+  files:
+  - gemma-4-E2B-it-Q4_K_M.gguf
+  quant: Q4_K_M
+  tags:
+  - general
+  - ids
+  - pi
+  - ios
+- id: granite4.1-3b-q4
+  tier: 3-4B
+  params_b: 3.0
+  repo: ibm-granite/granite-4.1-3b-GGUF
+  files:
+  - granite-4.1-3b-Q4_K_M.gguf
+  quant: Q4_K_M
+  tags:
+  - general
+  - coding
+  - pi5
+  - ios
+  - gpu3g
 - id: qwen2.5-coder-3b-q4
   tier: 3-4B
   params_b: 3.1
@@ -124,15 +188,16 @@ models:
   - pi5
   - ios
   - gpu3g
-- id: gemma3-4b-q4
+- id: gemma4-e4b-q4
   tier: 3-4B
-  params_b: 4.3
-  repo: ggml-org/gemma-3-4b-it-GGUF
+  params_b: 4.5
+  repo: unsloth/gemma-4-E4B-it-GGUF
   files:
-  - gemma-3-4b-it-Q4_K_M.gguf
+  - gemma-4-E4B-it-Q4_K_M.gguf
   quant: Q4_K_M
   tags:
   - general
+  - ids
   - pi5
   - ios
 - id: qwen2.5-coder-7b-q4
@@ -148,6 +213,27 @@ models:
   - xeon
   - gpu-split
   - cached
+- id: qwen2.5-coder-7b-q4_0
+  tier: 7-9B
+  params_b: 7.6
+  repo: Qwen/Qwen2.5-Coder-7B-Instruct-GGUF
+  files:
+  - qwen2.5-coder-7b-instruct-q4_0.gguf
+  quant: Q4_0
+  tags:
+  - quantcmp
+  - xeon
+  - gpu-split
+- id: qwen2.5-coder-7b-q8
+  tier: 7-9B
+  params_b: 7.6
+  repo: Qwen/Qwen2.5-Coder-7B-Instruct-GGUF
+  files:
+  - qwen2.5-coder-7b-instruct-q8_0.gguf
+  quant: Q8_0
+  tags:
+  - quantcmp
+  - xeon
 - id: qwen3.5-9b-q4
   tier: 7-9B
   params_b: 9.0
@@ -173,6 +259,19 @@ models:
   - coding
   - xeon
   - cached
+- id: gpt-oss-20b-mxfp4
+  tier: MoE
+  params_b: 21.0
+  active_b: 3.6
+  repo: ggml-org/gpt-oss-20b-GGUF
+  files:
+  - gpt-oss-20b-MXFP4.gguf
+  quant: MXFP4
+  tags:
+  - general
+  - coding
+  - xeon
+  - moe
 - id: qwen3-coder-30b-a3b-q4
   tier: MoE
   params_b: 30.5
@@ -194,6 +293,20 @@ models:
   files:
   - Qwen3.5-35B-A3B-Q4_K_M.gguf
   quant: Q4_K_M
+  tags:
+  - general
+  - coding
+  - ids
+  - xeon
+  - moe
+- id: qwen3.6-35b-a3b-q4
+  tier: MoE
+  params_b: 35.0
+  active_b: 3.0
+  repo: unsloth/Qwen3.6-35B-A3B-GGUF
+  files:
+  - Qwen3.6-35B-A3B-UD-Q4_K_M.gguf
+  quant: UD-Q4_K_M
   tags:
   - general
   - coding

@@ -38,11 +38,17 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 
 | host | model | quant/size | ngl | prompt tok/s (threads) | gen tok/s (threads) |
 |---|---|---|---|---|---|
+| og128x01 | qwen2.5-coder-14b-q4 | Medium 8.98 GB | 0 | 10.5 (t=24) | 3.2 (t=24) |
+| og128x01 | qwen2.5-coder-7b-q4 | Medium 4.68 GB | 0 | 20.9 (t=24) | 6.1 (t=24) |
+| og128x01 | qwen3-coder-30b-a3b-q4 | Medium 17.66 GB | 0 | 41.2 (t=24) | 11.5 (t=24) |
 | og128x01 | qwen3.5-0.8b-q8 | Q8_0 0.82 GB | 0 | 150.8 (t=24) | 23.1 (t=24) |
 
 ### Task scores
 
-_no task runs yet_
+| host | task | model | score | n | median latency s | notes |
+|---|---|---|---|---|---|---|
+| og128x01 | coding | qwen3.5-0.8b-q8 | 0.0 | 2 | 19.95 | smoke |
+| og128x01 | ids | qwen3.5-0.8b-q8 | 0.5 | 6 | 3.994 | smoke |
 <!-- results:end -->
 
 ## Findings and recommendations
