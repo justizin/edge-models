@@ -86,4 +86,10 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 
 ## Findings and recommendations
 
-_filled in per tier as phases complete; see `docs/tiers/`._
+### Xeon E5-2697 v2 (AVX only, 125 GB RAM), Phase 1 complete
+- Best coding assistant: Qwen3-Coder-30B-A3B (0.95 pass@1 at 8.8 s/problem, 11.5 tok/s gen). Best small: Granite 4.1-3B (0.95 at 6.5 s, 2 GB).
+- Dense 7B+ models are not worth it on pre-AVX2 CPUs: K-quant prompt processing drops to ~20 tok/s at 7B.
+- Log triage: no LLM under 4B beats a stdlib naive-Bayes classifier, and none beats regex rules on the synthetic set. Sub-1B models label everything malicious.
+- Details, tables, and caveats: `docs/tiers/xeon-avx.md`.
+
+_Other tiers pending hardware; see `docs/tiers/`._
