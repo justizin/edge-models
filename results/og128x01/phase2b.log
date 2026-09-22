@@ -1,0 +1,6 @@
+### 1. long-context WITHOUT RADV_DEBUG 2026-09-22T17:06:49Z
+== qwen2.5-coder-3b-q4  t=4 ngl=99 p=2048 n=64 r=1
+    2048p    0g  t=4   ngl=99    328.55 tok/s  (qwen2 3B Q4_K - Medium 2.10GB)
+       0p   64g  t=4   ngl=99     39.85 tok/s  (qwen2 3B Q4_K - Medium 2.10GB)
+### 2. MoE hybrid: experts on CPU, rest on 2 GPUs 2026-09-22T17:07:05Z
+== qwen3-coder-30b-a3b-q4  t=24 ngl=99 p=512 n=128 r=2

@@ -6,3 +6,127 @@
      512p    0g  t=4   ngl=99   4268.29 tok/s  (gemma3 270M Q8_0 0.29GB)
        0p  128g  t=4   ngl=99    105.30 tok/s  (gemma3 270M Q8_0 0.29GB)
 == qwen3.5-0.8b-q4_0  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    332.90 tok/s  (qwen35 0.8B Q4_0 0.55GB)
+       0p  128g  t=4   ngl=99     66.47 tok/s  (qwen35 0.8B Q4_0 0.55GB)
+== qwen3.5-0.8b-q8  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    317.75 tok/s  (qwen35 0.8B Q8_0 0.82GB)
+       0p  128g  t=4   ngl=99     69.99 tok/s  (qwen35 0.8B Q8_0 0.82GB)
+== llama3.2-1b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    957.31 tok/s  (llama 1B Q4_K - Medium 0.80GB)
+       0p  128g  t=4   ngl=99     84.35 tok/s  (llama 1B Q4_K - Medium 0.80GB)
+== qwen2.5-coder-1.5b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    188.80 tok/s  (qwen2 1.5B Q4_K - Medium 1.11GB)
+       0p  128g  t=4   ngl=99     54.04 tok/s  (qwen2 1.5B Q4_K - Medium 1.11GB)
+== qwen3.5-2b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    146.66 tok/s  (qwen35 2B Q4_K - Medium 1.27GB)
+       0p  128g  t=4   ngl=99     15.37 tok/s  (qwen35 2B Q4_K - Medium 1.27GB)
+== gemma4-e2b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    444.71 tok/s  (gemma4 E2B Q4_K - Medium 3.09GB)
+       0p  128g  t=4   ngl=99     29.66 tok/s  (gemma4 E2B Q4_K - Medium 3.09GB)
+== qwen2.5-coder-3b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    344.85 tok/s  (qwen2 3B Q4_K - Medium 2.10GB)
+       0p  128g  t=4   ngl=99     37.26 tok/s  (qwen2 3B Q4_K - Medium 2.10GB)
+== granite4.1-3b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    296.60 tok/s  (granite 3B Q4_K - Medium 2.10GB)
+       0p  128g  t=4   ngl=99     30.89 tok/s  (granite 3B Q4_K - Medium 2.10GB)
+== qwen3.5-4b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99     61.22 tok/s  (qwen35 4B Q4_K - Medium 2.73GB)
+       0p  128g  t=4   ngl=99     24.66 tok/s  (qwen35 4B Q4_K - Medium 2.73GB)
+== gemma4-e4b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    228.99 tok/s  (gemma4 E4B Q4_K - Medium 4.96GB)
+       0p  128g  t=4   ngl=99     21.55 tok/s  (gemma4 E4B Q4_K - Medium 4.96GB)
+== qwen2.5-coder-7b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99     38.32 tok/s  (qwen2 7B Q4_K - Medium 4.68GB)
+       0p  128g  t=4   ngl=99     20.57 tok/s  (qwen2 7B Q4_K - Medium 4.68GB)
+== qwen2.5-coder-7b-q4_0  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    174.04 tok/s  (qwen2 7B Q4_0 4.43GB)
+       0p  128g  t=4   ngl=99     24.82 tok/s  (qwen2 7B Q4_0 4.43GB)
+== qwen3.5-9b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99     32.58 tok/s  (qwen35 9B Q4_K - Medium 5.67GB)
+       0p  128g  t=4   ngl=99     17.50 tok/s  (qwen35 9B Q4_K - Medium 5.67GB)
+### dual card, layer split 2026-09-22T16:49:38Z
+== qwen2.5-coder-7b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99     72.81 tok/s  (qwen2 7B Q4_K - Medium 4.68GB)
+       0p  128g  t=4   ngl=99     14.44 tok/s  (qwen2 7B Q4_K - Medium 4.68GB)
+== qwen2.5-coder-7b-q4_0  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    221.43 tok/s  (qwen2 7B Q4_0 4.43GB)
+       0p  128g  t=4   ngl=99     24.32 tok/s  (qwen2 7B Q4_0 4.43GB)
+== qwen2.5-coder-7b-q8  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99     81.23 tok/s  (qwen2 7B Q8_0 8.09GB)
+       0p  128g  t=4   ngl=99     16.37 tok/s  (qwen2 7B Q8_0 8.09GB)
+== qwen3.5-9b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99     52.43 tok/s  (qwen35 9B Q4_K - Medium 5.67GB)
+       0p  128g  t=4   ngl=99     17.22 tok/s  (qwen35 9B Q4_K - Medium 5.67GB)
+== qwen2.5-coder-14b-q4  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99     35.12 tok/s  (qwen2 14B Q4_K - Medium 8.98GB)
+       0p  128g  t=4   ngl=99      9.38 tok/s  (qwen2 14B Q4_K - Medium 8.98GB)
+### long-context probe for the RADV DeviceLost bug 2026-09-22T16:53:41Z
+== qwen2.5-coder-3b-q4  t=4 ngl=99 p=2048 n=64 r=1
+    2048p    0g  t=4   ngl=99    323.04 tok/s  (qwen2 3B Q4_K - Medium 2.10GB)
+       0p   64g  t=4   ngl=99     37.17 tok/s  (qwen2 3B Q4_K - Medium 2.10GB)
+### coding task on GPU 2026-09-22T16:53:58Z
+== coding on qwen2.5-coder-7b-q4_0 via http://127.0.0.1:39401
+  PASS rle                       5.8s 
+  PASS is_balanced               5.4s 
+  PASS word_freq                 3.9s 
+  PASS chunk                     4.4s 
+  FAIL parse_kv                  3.6s ValueError: not enough values to unpack (expected 2, got 1)
+  PASS second_largest            4.2s 
+  PASS roman                    10.0s 
+  PASS ip_valid                  6.1s 
+  PASS cidr_contains             3.7s 
+  PASS merge_intervals           6.0s 
+  PASS flatten                   3.9s 
+  PASS caesar                    7.2s 
+  PASS median                    4.7s 
+  PASS dedupe_keep_order         3.7s 
+  FAIL parse_syslog              7.9s KeyError: 'proc'
+  PASS top_n                     3.6s 
+  PASS bin_search                6.7s 
+  PASS hex_dump                  3.4s 
+  PASS fix_avg                   5.3s 
+  PASS fix_offbyone              4.9s 
+  PASS fix_mutable_default       4.1s 
+  PASS fix_strip_prefix          4.0s 
+score=0.909 n=22 median_latency=4.54s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x1/task-20260922T165556Z-coding-qwen2.5-coder-7b-q4_0.json
+== coding on qwen2.5-coder-14b-q4 via http://127.0.0.1:60799
+  PASS rle                      16.7s 
+  PASS is_balanced              17.1s 
+  PASS word_freq                15.6s 
+  PASS chunk                    11.6s 
+  PASS parse_kv                 13.9s 
+  PASS second_largest           13.6s 
+  PASS roman                    27.4s 
+  PASS ip_valid                 14.1s 
+  PASS cidr_contains            10.8s 
+  PASS merge_intervals          18.6s 
+  PASS flatten                  13.2s 
+  PASS caesar                   18.6s 
+  PASS median                   15.4s 
+  PASS dedupe_keep_order        10.1s 
+  FAIL parse_syslog             25.5s ValueError: Line does not match expected syslog format
+  PASS top_n                     9.8s 
+  PASS bin_search               16.8s 
+  PASS hex_dump                  8.8s 
+  PASS fix_avg                  13.5s 
+  PASS fix_offbyone             11.8s 
+  PASS fix_mutable_default      10.8s 
+  PASS fix_strip_prefix         11.1s 
+score=0.955 n=22 median_latency=13.77s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x2/task-20260922T170130Z-coding-qwen2.5-coder-14b-q4.json
+### ids task on GPU 2026-09-22T17:01:31Z
+== ids on qwen3.5-4b-q4 via http://127.0.0.1:49245
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS uid0-user-added        truth=1 pred=0 raw='BENIGN'
+  MISS fw-noise               truth=0 pred=1 raw='MALICIOUS'
+  MISS root-login-external    truth=1 pred=0 raw='BENIGN'
+score=0.908 n=163 median_latency=1.677s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x1/task-20260922T170601Z-ids-qwen3.5-4b-q4.json
+### done 2026-09-22T17:06:01Z
+1 hosts, 152 bench rows, 25 task runs -> README.md

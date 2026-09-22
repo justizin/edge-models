@@ -63,7 +63,25 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 | og128x01 | smollm2-135m-q8 | Q8_0 0.14 GB | 0 | 629.5 (t=24) | 98.5 (t=12) |
 | og128x01 | smollm2-360m-q8 | Q8_0 0.38 GB | 0 | 278.7 (t=24) | 45.6 (t=12) |
 | og128x01-d700x1 | gemma3-270m-q8 | Q8_0 0.29 GB | 99 | 4268.3 (t=4) | 105.3 (t=4) |
+| og128x01-d700x1 | gemma4-e2b-q4 | Q4_K_M 3.09 GB | 99 | 444.7 (t=4) | 29.7 (t=4) |
+| og128x01-d700x1 | gemma4-e4b-q4 | Q4_K_M 4.96 GB | 99 | 229.0 (t=4) | 21.5 (t=4) |
+| og128x01-d700x1 | granite4.1-3b-q4 | Q4_K_M 2.10 GB | 99 | 296.6 (t=4) | 30.9 (t=4) |
+| og128x01-d700x1 | llama3.2-1b-q4 | Q4_K_M 0.80 GB | 99 | 957.3 (t=4) | 84.4 (t=4) |
+| og128x01-d700x1 | qwen2.5-coder-1.5b-q4 | Q4_K_M 1.11 GB | 99 | 188.8 (t=4) | 54.0 (t=4) |
+| og128x01-d700x1 | qwen2.5-coder-3b-q4 | Q4_K_M 2.10 GB | 99 | 344.9 (t=4) | 37.3 (t=4) |
+| og128x01-d700x1 | qwen2.5-coder-7b-q4 | Q4_K_M 4.68 GB | 99 | 38.3 (t=4) | 20.6 (t=4) |
+| og128x01-d700x1 | qwen2.5-coder-7b-q4_0 | Q4_0 4.43 GB | 99 | 174.0 (t=4) | 24.8 (t=4) |
+| og128x01-d700x1 | qwen3.5-0.8b-q4_0 | Q4_0 0.55 GB | 99 | 332.9 (t=4) | 66.5 (t=4) |
+| og128x01-d700x1 | qwen3.5-0.8b-q8 | Q8_0 0.82 GB | 99 | 317.8 (t=4) | 70.0 (t=4) |
+| og128x01-d700x1 | qwen3.5-2b-q4 | Q4_K_M 1.27 GB | 99 | 146.7 (t=4) | 15.4 (t=4) |
+| og128x01-d700x1 | qwen3.5-4b-q4 | Q4_K_M 2.73 GB | 99 | 61.2 (t=4) | 24.7 (t=4) |
+| og128x01-d700x1 | qwen3.5-9b-q4 | Q4_K_M 5.67 GB | 99 | 32.6 (t=4) | 17.5 (t=4) |
 | og128x01-d700x1 | smollm2-360m-q8 | Q8_0 0.38 GB | 99 | 2027.4 (t=4) | 97.9 (t=4) |
+| og128x01-d700x2 | qwen2.5-coder-14b-q4 | Q4_K_M 8.98 GB | 99 | 35.1 (t=4) | 9.4 (t=4) |
+| og128x01-d700x2 | qwen2.5-coder-7b-q4 | Q4_K_M 4.68 GB | 99 | 72.8 (t=4) | 14.4 (t=4) |
+| og128x01-d700x2 | qwen2.5-coder-7b-q4_0 | Q4_0 4.43 GB | 99 | 221.4 (t=4) | 24.3 (t=4) |
+| og128x01-d700x2 | qwen2.5-coder-7b-q8 | Q8_0 8.09 GB | 99 | 81.2 (t=4) | 16.4 (t=4) |
+| og128x01-d700x2 | qwen3.5-9b-q4 | Q4_K_M 5.67 GB | 99 | 52.4 (t=4) | 17.2 (t=4) |
 
 ### Task scores
 
@@ -91,14 +109,19 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 | og128x01 | ids | qwen3-coder-30b-a3b-q4 | 0.881 | 163 | 2.354 |  |
 | og128x01 | coding | qwen3.6-35b-a3b-q4 | 1.0 | 22 | 16.42 |  |
 | og128x01 | coding | gpt-oss-20b-mxfp4 | 0.909 | 22 | 28.65 |  |
+| og128x01-d700x1 | coding | qwen2.5-coder-7b-q4_0 | 0.909 | 22 | 4.54 | single D700 |
+| og128x01-d700x1 | ids | qwen3.5-4b-q4 | 0.908 | 163 | 1.677 | single D700 |
+| og128x01-d700x2 | coding | qwen2.5-coder-14b-q4 | 0.955 | 22 | 13.77 | dual D700 |
 <!-- results:end -->
 
 ## Findings and recommendations
 
-### Xeon E5-2697 v2 (AVX only, 125 GB RAM), Phase 1 complete
-- Best coding assistant: Qwen3-Coder-30B-A3B (0.95 pass@1 at 8.8 s/problem, 11.5 tok/s gen). Best small: Granite 4.1-3B (0.95 at 6.5 s, 2 GB).
-- Dense 7B+ models are not worth it on pre-AVX2 CPUs: K-quant prompt processing drops to ~20 tok/s at 7B.
-- Log triage: no LLM under 4B beats a stdlib naive-Bayes classifier, and none beats regex rules on the synthetic set. Sub-1B models label everything malicious.
-- Details, tables, and caveats: `docs/tiers/xeon-avx.md`.
+Per-tier detail lives in `docs/tiers/`. Short version, updated as phases complete:
 
-_Other tiers pending hardware; see `docs/tiers/`._
+| tier | status | coding assistant | log triage |
+|---|---|---|---|
+| Xeon E5-2697 v2, AVX only, 125 GB (`xeon-avx.md`) | done | Qwen3-Coder-30B-A3B (11.5 tok/s, 0.95) if RAM allows; else Granite 4.1-3B or Qwen2.5-Coder-3B (~13 tok/s, 0.91–0.95). Qwen3.6-35B-A3B scored 1.00 but at 7.6 tok/s. | Not an LLM job: stdlib regex + naive Bayes at ~50 µs/line beat every model under 9B. Use Qwen3.5-4B only to explain flagged lines. |
+| 2x FirePro D700 6 GB, RADV Vulkan (`radeon-gcn1-vulkan.md`) | done | Qwen2.5-Coder-7B **Q4_0** on one card: 25 tok/s, 0.91, 4.5 s/problem. 14B Q4_K_M across both cards: 9.4 tok/s, 0.95. Avoid the Qwen3.5 family on this GPU. | Qwen3.5-4B at 1.7 s/line, F1 0.91; still loses to the stdlib baselines. |
+| Raspberry Pi | awaiting hardware | expected: Qwen2.5-Coder-1.5B / Qwen3.5-2B on a Pi 5 | stdlib baselines; 270M–800M LLM adds nothing |
+| iOS | awaiting devices | route 1 apps; Foundation Models for classification only | Foundation Models `@Generable` enum |
+| Switches | awaiting inventory | Arista: container-manager + static build; NX-OS: guest shell / Docker; IOS-XE: IOx (license); Junos: Python only | stdlib naive Bayes runs anywhere Python 3 does, including classic Junos |
