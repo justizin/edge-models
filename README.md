@@ -111,13 +111,13 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 | og128x01 | ids | qwen3.5-0.8b-q8 | 0.639 | 163 | 0.633 |  |
 | og128x01 | ids | llama3.2-1b-q4 | 0.542 | 163 | 0.523 |  |
 | og128x01 | ids | qwen3.5-2b-q4 | 0.777 | 163 | 1.925 |  |
-| og128x01 | ids | gemma4-e2b-q4 | 0.584 | 163 | 9.719 |  |
 | og128x01 | ids | qwen3.5-4b-q4 | 0.916 | 163 | 3.641 |  |
 | og128x01 | ids | gemma4-e4b-q4 | 0.882 | 163 | 3.338 |  |
 | og128x01 | ids | qwen3.5-9b-q4 | 0.952 | 163 | 16.314 |  |
 | og128x01 | ids | qwen3-coder-30b-a3b-q4 | 0.881 | 163 | 2.354 |  |
 | og128x01 | coding | qwen3.6-35b-a3b-q4 | 1.0 | 22 | 16.42 |  |
 | og128x01 | coding | gpt-oss-20b-mxfp4 | 0.909 | 22 | 28.65 |  |
+| og128x01 | ids | gemma4-e2b-q4 | 0.584 | 163 | 1.51 | rerun 2026-09-22 to check 9.7 s/line anomaly |
 | og128x01-d700x1 | coding | qwen2.5-coder-7b-q4_0 | 0.909 | 22 | 4.54 | single D700 |
 | og128x01-d700x1 | ids | qwen3.5-4b-q4 | 0.908 | 163 | 1.677 | single D700 |
 | og128x01-d700x1 | coding | granite4.1-3b-q4_0 | 0.909 | 22 | 3.8 | single D700 |

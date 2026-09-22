@@ -61,7 +61,7 @@ The set saturates at 3B: five models tie within one problem of each other. A har
 | Qwen3-Coder-30B-A3B | 0.88 | 0.79 | 1.00 | 2.4 |
 | Qwen3.5-2B | 0.78 | 1.00 | 0.64 | 1.9 |
 | Qwen3.5-0.8B | 0.64 | 0.52 | 0.84 | 0.6 |
-| Gemma 4 E2B | 0.58 | 1.00 | 0.41 | 9.7 |
+| Gemma 4 E2B | 0.58 | 1.00 | 0.41 | 1.5 |
 | LFM2.5-350M | 0.56 | 0.39 | 1.00 | 0.5 |
 | Gemma 3 270M | 0.56 | 0.39 | 1.00 | 0.3 |
 | Llama 3.2 1B | 0.54 | 0.38 | 0.92 | 0.5 |
@@ -69,7 +69,7 @@ The set saturates at 3B: five models tie within one problem of each other. A har
 - Every model under 1B (and Llama 3.2 1B) answers MALICIOUS to essentially every line: recall 1.0, precision 0.39. They add nothing over a grep.
 - Only 4B and up match the naive-Bayes baseline, at 60,000x the per-line cost. On this synthetic set the regex rules are perfect, which is the point: the set is easy, and an LLM that cannot match it does not belong in a pipeline.
 - Where an LLM could still earn its place: explaining an alert, summarizing a burst, or handling log formats no rule anticipated. That is a different task and needs a different dataset (real loghub samples), which is the next IDS step.
-- Gemma 4 E2B took ~10 s per line despite 16 tok/s generation; something in its prompt path (PLE embeddings or template) is slow on this CPU. Not yet investigated.
+- Gemma 4 E2B originally logged ~10 s per line; a re-run on 2026-09-22 with identical settings gave the same F1 at 1.5 s/line, and a single request through llama-server takes 2.9 s cold. The first run's latency was a transient artifact (cause not identified; the anomalous result file was dropped). Its real problem is recall 0.41: it calls almost everything benign.
 
 ## Recommendation for this tier
 - Coding assistant: **Qwen3-Coder-30B-A3B** if the box has the RAM (needs ~20 GB), else **Granite 4.1-3B** or **Qwen2.5-Coder-3B** (2 GB). Serve with `deploy/xeon/llama-coder.service`.
