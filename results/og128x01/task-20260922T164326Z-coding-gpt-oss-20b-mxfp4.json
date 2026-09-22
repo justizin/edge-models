@@ -1,0 +1,191 @@
+{
+ "score": 0.909,
+ "n": 22,
+ "passed": 20,
+ "median_latency_s": 28.65,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 22.56,
+   "out_tokens": 177
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 67.44,
+   "out_tokens": 234
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 27.65,
+   "out_tokens": 230
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 14.94,
+   "out_tokens": 136
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 43.42,
+   "out_tokens": 409
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 26.92,
+   "out_tokens": 251
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 31.0,
+   "out_tokens": 293
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 32.76,
+   "out_tokens": 301
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 23.97,
+   "out_tokens": 216
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'merge_intervals' is not defined",
+   "s": 53.9,
+   "out_tokens": 512
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 39.98,
+   "out_tokens": 369
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 44.81,
+   "out_tokens": 421
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 32.24,
+   "out_tokens": 306
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 14.57,
+   "out_tokens": 137
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: unterminated string literal (detected at line 16)",
+   "s": 54.0,
+   "out_tokens": 512
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 27.21,
+   "out_tokens": 255
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 29.64,
+   "out_tokens": 281
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 16.83,
+   "out_tokens": 152
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 27.34,
+   "out_tokens": 247
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 31.65,
+   "out_tokens": 285
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 15.83,
+   "out_tokens": 139
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 26.22,
+   "out_tokens": 161
+  }
+ ],
+ "task": "coding",
+ "model_id": "gpt-oss-20b-mxfp4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "",
+ "date": "2026-09-22T16:43:26Z"
+}

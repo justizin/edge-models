@@ -10,3 +10,62 @@
        0p  128g  t=24  ngl=0      31.30 tok/s  (qwen35 0.8B Q4_0 0.55GB)
 ### moe 2026-09-22T16:20:16Z
 == qwen3.5-35b-a3b-q4  t=24 ngl=0 p=512 n=128 r=2
+     512p    0g  t=24  ngl=0      39.75 tok/s  (qwen35moe 35B.A3B Q4_K - Medium 22.01GB)
+       0p  128g  t=24  ngl=0       7.48 tok/s  (qwen35moe 35B.A3B Q4_K - Medium 22.01GB)
+== qwen3.6-35b-a3b-q4  t=24 ngl=0 p=512 n=128 r=2
+     512p    0g  t=24  ngl=0      37.22 tok/s  (qwen35moe 35B.A3B Q4_K - Medium 22.12GB)
+       0p  128g  t=24  ngl=0       7.64 tok/s  (qwen35moe 35B.A3B Q4_K - Medium 22.12GB)
+== gpt-oss-20b-mxfp4  t=24 ngl=0 p=512 n=128 r=2
+     512p    0g  t=24  ngl=0      36.81 tok/s  (gpt-oss 20B MXFP4 MoE 12.10GB)
+       0p  128g  t=24  ngl=0      10.41 tok/s  (gpt-oss 20B MXFP4 MoE 12.10GB)
+### coding on new moe 2026-09-22T16:25:03Z
+== coding on qwen3.6-35b-a3b-q4 via http://127.0.0.1:58165
+  PASS rle                      23.8s 
+  PASS is_balanced              20.1s 
+  PASS word_freq                20.4s 
+  PASS chunk                    10.3s 
+  PASS parse_kv                 16.9s 
+  PASS second_largest           11.7s 
+  PASS roman                    29.4s 
+  PASS ip_valid                 23.2s 
+  PASS cidr_contains            16.3s 
+  PASS merge_intervals          25.9s 
+  PASS flatten                  11.9s 
+  PASS caesar                   19.7s 
+  PASS median                   16.5s 
+  PASS dedupe_keep_order        10.7s 
+  PASS parse_syslog             43.4s 
+  PASS top_n                    11.8s 
+  PASS bin_search               17.0s 
+  PASS hex_dump                 11.2s 
+  PASS fix_avg                  12.7s 
+  PASS fix_offbyone             12.1s 
+  PASS fix_mutable_default      10.3s 
+  PASS fix_strip_prefix          9.9s 
+score=1.0 n=22 median_latency=16.42s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260922T163136Z-coding-qwen3.6-35b-a3b-q4.json
+== coding on gpt-oss-20b-mxfp4 via http://127.0.0.1:35525
+  PASS rle                      22.6s 
+  PASS is_balanced              67.4s 
+  PASS word_freq                27.7s 
+  PASS chunk                    14.9s 
+  PASS parse_kv                 43.4s 
+  PASS second_largest           26.9s 
+  PASS roman                    31.0s 
+  PASS ip_valid                 32.8s 
+  PASS cidr_contains            24.0s 
+  FAIL merge_intervals          53.9s NameError: name 'merge_intervals' is not defined
+  PASS flatten                  40.0s 
+  PASS caesar                   44.8s 
+  PASS median                   32.2s 
+  PASS dedupe_keep_order        14.6s 
+  FAIL parse_syslog             54.0s SyntaxError: unterminated string literal (detected at line 1
+  PASS top_n                    27.2s 
+  PASS bin_search               29.6s 
+  PASS hex_dump                 16.8s 
+  PASS fix_avg                  27.3s 
+  PASS fix_offbyone             31.7s 
+  PASS fix_mutable_default      15.8s 
+  PASS fix_strip_prefix         26.2s 
+score=0.909 n=22 median_latency=28.65s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20260922T164326Z-coding-gpt-oss-20b-mxfp4.json
+### done 2026-09-22T16:43:26Z
+1 hosts, 110 bench rows, 22 task runs -> README.md

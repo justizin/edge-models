@@ -1,0 +1,191 @@
+{
+ "score": 1.0,
+ "n": 22,
+ "passed": 22,
+ "median_latency_s": 16.42,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 23.79,
+   "out_tokens": 149
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 20.15,
+   "out_tokens": 138
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 20.43,
+   "out_tokens": 139
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.26,
+   "out_tokens": 63
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 16.93,
+   "out_tokens": 111
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.72,
+   "out_tokens": 74
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 29.41,
+   "out_tokens": 202
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 23.22,
+   "out_tokens": 156
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 16.3,
+   "out_tokens": 103
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 25.89,
+   "out_tokens": 178
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.9,
+   "out_tokens": 77
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 19.72,
+   "out_tokens": 131
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 16.55,
+   "out_tokens": 106
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.7,
+   "out_tokens": 68
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 43.42,
+   "out_tokens": 301
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.84,
+   "out_tokens": 75
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 17.01,
+   "out_tokens": 115
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.18,
+   "out_tokens": 69
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 12.72,
+   "out_tokens": 72
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 12.05,
+   "out_tokens": 67
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 10.27,
+   "out_tokens": 58
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 9.93,
+   "out_tokens": 57
+  }
+ ],
+ "task": "coding",
+ "model_id": "qwen3.6-35b-a3b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "",
+ "date": "2026-09-22T16:31:36Z"
+}

@@ -32,7 +32,7 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 
 | host | cpu | cores | simd | ram | gpu (driver) | llama.cpp |
 |---|---|---|---|---|---|---|
-| og128x01 | Intel(R) Xeon(R) CPU E5-2697 v2 @ 2.70GHz | 24 | sse4_2 avx f16c | 125 GB | Advanced Micro Devices, Inc. [AMD/ATI] Tahiti XT [Radeon HD  (radeon) | 6a1a922d2 |
+| og128x01 | Intel(R) Xeon(R) CPU E5-2697 v2 @ 2.70GHz | 24 | sse4_2 avx f16c | 125 GB | Advanced Micro Devices, Inc. [AMD/ATI] Tahiti XT [Radeon HD  (amdgpu) | 6a1a922d2 |
 
 ### llama-bench throughput (best over thread counts)
 
@@ -41,6 +41,7 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 | og128x01 | gemma3-270m-q8 | Q8_0 0.29 GB | 0 | 577.8 (t=24) | 58.4 (t=12) |
 | og128x01 | gemma4-e2b-q4 | Q4_K_M 3.09 GB | 0 | 65.0 (t=24) | 15.5 (t=24) |
 | og128x01 | gemma4-e4b-q4 | Q4_K_M 4.96 GB | 0 | 31.5 (t=24) | 8.1 (t=24) |
+| og128x01 | gpt-oss-20b-mxfp4 | MXFP4 MoE 12.10 GB | 0 | 36.8 (t=24) | 10.4 (t=24) |
 | og128x01 | granite4.1-3b-q4 | Q4_K_M 2.10 GB | 0 | 42.4 (t=24) | 12.8 (t=24) |
 | og128x01 | lfm2.5-350m-q8 | Q8_0 0.38 GB | 0 | 379.1 (t=24) | 56.4 (t=12) |
 | og128x01 | llama3.2-1b-q4 | Q4_K_M 0.80 GB | 0 | 140.3 (t=24) | 33.2 (t=24) |
@@ -49,14 +50,20 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 | og128x01 | qwen2.5-coder-14b-q4 | Q4_K_M 8.98 GB | 0 | 10.5 (t=24) | 3.2 (t=24) |
 | og128x01 | qwen2.5-coder-3b-q4 | Q4_K_M 2.10 GB | 0 | 48.3 (t=24) | 14.1 (t=24) |
 | og128x01 | qwen2.5-coder-7b-q4 | Q4_K_M 4.68 GB | 0 | 20.9 (t=24) | 6.1 (t=24) |
+| og128x01 | qwen2.5-coder-7b-q4_0 | Q4_0 4.43 GB | 0 | 18.0 (t=24) | 6.5 (t=24) |
+| og128x01 | qwen2.5-coder-7b-q8 | Q8_0 8.09 GB | 0 | 20.2 (t=24) | 3.9 (t=24) |
 | og128x01 | qwen3-coder-30b-a3b-q4 | Q4_K_M 17.66 GB | 0 | 41.2 (t=24) | 11.5 (t=24) |
-| og128x01 | qwen3.5-0.8b-q4_0 | Q4_0 0.55 GB | 0 | 186.1 (t=24) | 29.7 (t=24) |
+| og128x01 | qwen3.5-0.8b-q4_0 | Q4_0 0.55 GB | 0 | 186.1 (t=24) | 31.3 (t=24) |
 | og128x01 | qwen3.5-0.8b-q8 | Q8_0 0.82 GB | 0 | 150.8 (t=24) | 23.1 (t=24) |
 | og128x01 | qwen3.5-2b-q4 | Q4_K_M 1.27 GB | 0 | 79.1 (t=24) | 17.6 (t=24) |
+| og128x01 | qwen3.5-35b-a3b-q4 | Q4_K_M 22.01 GB | 0 | 39.7 (t=24) | 7.5 (t=24) |
 | og128x01 | qwen3.5-4b-q4 | Q4_K_M 2.73 GB | 0 | 31.2 (t=24) | 7.9 (t=24) |
 | og128x01 | qwen3.5-9b-q4 | Q4_K_M 5.67 GB | 0 | 17.3 (t=24) | 4.8 (t=24) |
+| og128x01 | qwen3.6-35b-a3b-q4 | Q4_K_M 22.12 GB | 0 | 37.2 (t=24) | 7.6 (t=24) |
 | og128x01 | smollm2-135m-q8 | Q8_0 0.14 GB | 0 | 629.5 (t=24) | 98.5 (t=12) |
 | og128x01 | smollm2-360m-q8 | Q8_0 0.38 GB | 0 | 278.7 (t=24) | 45.6 (t=12) |
+| og128x01-d700x1 | gemma3-270m-q8 | Q8_0 0.29 GB | 99 | 4268.3 (t=4) | 105.3 (t=4) |
+| og128x01-d700x1 | smollm2-360m-q8 | Q8_0 0.38 GB | 99 | 2027.4 (t=4) | 97.9 (t=4) |
 
 ### Task scores
 
@@ -82,6 +89,8 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 | og128x01 | ids | gemma4-e4b-q4 | 0.882 | 163 | 3.338 |  |
 | og128x01 | ids | qwen3.5-9b-q4 | 0.952 | 163 | 16.314 |  |
 | og128x01 | ids | qwen3-coder-30b-a3b-q4 | 0.881 | 163 | 2.354 |  |
+| og128x01 | coding | qwen3.6-35b-a3b-q4 | 1.0 | 22 | 16.42 |  |
+| og128x01 | coding | gpt-oss-20b-mxfp4 | 0.909 | 22 | 28.65 |  |
 <!-- results:end -->
 
 ## Findings and recommendations
