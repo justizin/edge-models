@@ -1,6 +1,6 @@
 #!/bin/sh
 # Run llama-bench -> results/<host>/bench-<stamp>-<id>.json
-# usage: bench_llamacpp.sh [-t threads] [-ngl N] [-p 512] [-n 128] [-r 3] [id|tag|/path/to/model.gguf ...]
+# EXTRA="-ub 256 -fa off" adds raw llama-bench args. usage: bench_llamacpp.sh [-t threads] [-ngl N] [-p 512] [-n 128] [-r 3] [id|tag|/path/to/model.gguf ...]
 # Bare .gguf paths work without the manifest (for Pis, switches, phones).
 . "$(dirname "$0")/common.sh"
 T="${THREADS:-$(nproc 2>/dev/null || echo 4)}"; NGL="${NGL:-0}"; P="${NP:-512}"; N="${NG:-128}"; R="${REPS:-3}"
@@ -23,7 +23,7 @@ for t in $targets; do
   [ -z "$mp" ] && { echo "skip   $id (not downloaded)"; continue; }
   out="$RESULTS/bench-$(stamp)-$id.json"
   echo "== $id  t=$T ngl=$NGL p=$P n=$N r=$R"
-  "$LLAMA_BIN/llama-bench" -m "$mp" -t "$T" -ngl "$NGL" -p "$P" -n "$N" -r "$R" -o json 2>"$out.err" \
+  "$LLAMA_BIN/llama-bench" -m "$mp" -t "$T" -ngl "$NGL" -p "$P" -n "$N" -r "$R" $EXTRA -o json 2>"$out.err" \
     | "$PY" -c "
 import json,sys; rows=json.load(sys.stdin)
 for r in rows: r.update(model_id='$id', host='$HOSTTAG')
