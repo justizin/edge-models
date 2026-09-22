@@ -1,2 +1,5 @@
 ### quantcmp 2026-09-22T16:05:55Z
 == qwen2.5-coder-7b-q4_0  t=24 ngl=0 p=512 n=128 r=2
+     512p    0g  t=24  ngl=0      17.98 tok/s  (qwen2 7B Q4_0 4.43GB)
+       0p  128g  t=24  ngl=0       6.47 tok/s  (qwen2 7B Q4_0 4.43GB)
+== qwen2.5-coder-7b-q8  t=24 ngl=0 p=512 n=128 r=2
