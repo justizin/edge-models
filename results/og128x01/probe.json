@@ -1,6 +1,6 @@
 {
   "host": "og128x01",
-  "date": "20260921T061813Z",
+  "date": "20260922T161422Z",
   "os": "Linux",
   "kernel": "6.12.107+deb13-amd64",
   "arch": "x86_64",
@@ -10,9 +10,9 @@
   "cpu_flags": "sse4_2 avx f16c",
   "mem_total_mb": "128788",
   "gpu": "VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Tahiti XT [Radeon HD 7970/8970 OEM / R9 280X];VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Tahiti XT [Radeon HD 7970/8970 OEM / R9 280X];",
-  "gpu_driver": "radeon",
+  "gpu_driver": "amdgpu",
   "vulkan": "llvmpipe (LLVM 19.1.7, 256 bits);",
-  "disk_free_gb": "564",
+  "disk_free_gb": "369",
   "llama_bin": "/home/sneakernaut/src/llama.cpp/build/bin",
   "llama_commit": "6a1a922d2",
   "_": null
