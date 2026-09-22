@@ -31,7 +31,7 @@ Any pre-2013 Xeon or Core i7 (Sandy/Ivy Bridge), and by extension the many x86 s
 
 Observations:
 - Generation is memory-bandwidth bound: for models under ~1 GB, 12 threads (one per core) wins on generation; above that 24 threads wins on both. Prompt processing always wants 24.
-- Q4_0 beat Q8_0 on the same 0.8B model by ~25% on both axes. K-quants fall behind on this AVX-only silicon: 7B Q4_K_M prompt processing is 21 tok/s, meaning a 2k-token editor context takes ~100 s before the first token. That is the practical ceiling for dense models here.
+- Quant format barely matters for speed here (measured 2026-09-22 on the 7B coder, 24 threads): Q4_K_M 21 / 6.1 tok/s, Q4_0 17.5 / 6.1, Q8_0 20 / 3.9. Generation tracks bytes moved (Q8 is half the speed of Q4), prompt processing is compute-bound and flat across quants. The earlier guess that K-quants are penalized on AVX-only silicon was wrong; keep Q4_K_M. The real ceiling is compute: a 2k-token editor context on a dense 7B takes ~100 s before the first token.
 - The MoE coder (30B total, 3.3B active) runs at 3B-class speed with 125 GB RAM holding it resident. It is the only way to get 7B+ quality at usable latency on this CPU.
 
 ### Coding task (22 problems, pass@1, median seconds per problem)
