@@ -76,3 +76,25 @@ Setup: `sg render -c ...`, `-ngl 99 -ub 256 -fa off`, 4 CPU threads. `RADV_DEBUG
 | gpt-oss-20b fully on 2 GPUs (12.1 GB MXFP4) | **109 / 23** | fits; 2.2x CPU generation, best 20B-class number on this box |
 
 Conclusion: MoE offload only pays when the whole model fits in VRAM. The 30B-A3B coders stay on the CPU; gpt-oss-20b becomes a GPU model. Phase 2c adds Q4_0 rows for the 3B/4B/14B models and a GPU coding run for gpt-oss-20b.
+
+## Phase 2c: Q4_0 variants and GPU coding runs (2026-09-22)
+| model | quant | config | pp / tg tok/s | vs Q4_K_M |
+|---|---|---|---|---|
+| Qwen2.5-Coder-3B | Q4_0 | 1 card | 373 / 43 | 345 / 37 |
+| Granite 4.1-3B | Q4_0 | 1 card | 327 / 37 | 297 / 31 |
+| Gemma 4 E4B | Q4_0 | 1 card | 251 / 25 | 229 / 22 |
+| Qwen2.5-Coder-14B | Q4_0 | 2 cards | **109 / 13.8** | 35 / 9.4 |
+
+| task | model | config | score | median s |
+|---|---|---|---|---|
+| coding | Granite 4.1-3B Q4_0 | 1 card | 0.91 | **3.8** |
+| coding | Qwen2.5-Coder-14B Q4_0 | 2 cards | 0.91 | 10.2 |
+| coding | gpt-oss-20b MXFP4 | 2 cards | 0.86 | 15.6 |
+
+- Q4_0 gives ~10% over Q4_K_M when the model fits comfortably, and 3x on prompt processing when it does not (14B). Rule for these cards: Q4_0 above ~4 GB, either below.
+- gpt-oss-20b is fast on the GPUs but its built-in reasoning burns the 512-token answer budget; it scores lower than on CPU and stays slow per problem. Not a fit for terse coding prompts without raising `max_tokens` or disabling reasoning.
+
+## Recommendation for this tier
+- Coding assistant: **Granite 4.1-3B Q4_0 on one card** (37 tok/s, 0.91, 3.8 s/problem) for snappy completions; **Qwen2.5-Coder-14B Q4_0 across both cards** (13.8 tok/s, 0.91) when quality per answer matters more than speed. Qwen2.5-Coder-7B Q4_0 on one card sits between them (25 tok/s, 0.91, 4.5 s). Leave the 30B-A3B MoE on the CPU.
+- Log triage: same verdict as the CPU tier; the GPU only makes the wrong tool faster.
+- Serve with `deploy/xeon/llama-coder.service` variants: add `-ngl 99 -ub 256 -fa off`, run the unit with `SupplementaryGroups=render`, and set `GGML_VK_VISIBLE_DEVICES=0` for single-card units.

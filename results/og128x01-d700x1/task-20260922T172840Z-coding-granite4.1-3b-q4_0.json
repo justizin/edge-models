@@ -1,0 +1,191 @@
+{
+ "score": 0.909,
+ "n": 22,
+ "passed": 20,
+ "median_latency_s": 3.8,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.9,
+   "out_tokens": 122
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.64,
+   "out_tokens": 98
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.43,
+   "out_tokens": 93
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.43,
+   "out_tokens": 55
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.08,
+   "out_tokens": 83
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.0,
+   "out_tokens": 42
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 6.06,
+   "out_tokens": 149
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.23,
+   "out_tokens": 90
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: invalid literal for int() with base 16: '10.0.0.0'",
+   "s": 4.06,
+   "out_tokens": 82
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.99,
+   "out_tokens": 79
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.06,
+   "out_tokens": 43
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.29,
+   "out_tokens": 87
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.7,
+   "out_tokens": 69
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 3.02,
+   "out_tokens": 46
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: invalid literal for int() with base 10: '1234]:'",
+   "s": 5.9,
+   "out_tokens": 143
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 2.86,
+   "out_tokens": 39
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 4.63,
+   "out_tokens": 104
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 2.52,
+   "out_tokens": 28
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 3.44,
+   "out_tokens": 48
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 3.5,
+   "out_tokens": 58
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 2.61,
+   "out_tokens": 27
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 3.02,
+   "out_tokens": 48
+  }
+ ],
+ "task": "coding",
+ "model_id": "granite4.1-3b-q4_0",
+ "host": "og128x01-d700x1",
+ "threads": 4,
+ "ngl": 99,
+ "notes": "single D700",
+ "date": "2026-09-22T17:28:40Z"
+}

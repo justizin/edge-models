@@ -1,0 +1,191 @@
+{
+ "score": 0.909,
+ "n": 22,
+ "passed": 20,
+ "median_latency_s": 10.24,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.09,
+   "out_tokens": 131
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 12.36,
+   "out_tokens": 108
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.58,
+   "out_tokens": 94
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.97,
+   "out_tokens": 60
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: too many values to unpack (expected 2)",
+   "s": 10.31,
+   "out_tokens": 80
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.17,
+   "out_tokens": 76
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 19.4,
+   "out_tokens": 201
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 15.58,
+   "out_tokens": 147
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.31,
+   "out_tokens": 49
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 13.57,
+   "out_tokens": 121
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.21,
+   "out_tokens": 69
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.2,
+   "out_tokens": 93
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.97,
+   "out_tokens": 89
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 8.67,
+   "out_tokens": 60
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 18.04,
+   "out_tokens": 185
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 7.55,
+   "out_tokens": 43
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 12.22,
+   "out_tokens": 109
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.56,
+   "out_tokens": 66
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 9.94,
+   "out_tokens": 67
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 8.85,
+   "out_tokens": 62
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 8.02,
+   "out_tokens": 53
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 8.35,
+   "out_tokens": 53
+  }
+ ],
+ "task": "coding",
+ "model_id": "qwen2.5-coder-14b-q4_0",
+ "host": "og128x01-d700x2",
+ "threads": 4,
+ "ngl": 99,
+ "notes": "dual D700",
+ "date": "2026-09-22T17:27:12Z"
+}

@@ -1,0 +1,89 @@
+### Q4_0 single card 2026-09-22T17:15:18Z
+== qwen2.5-coder-3b-q4_0  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    373.39 tok/s  (qwen2 3B Q4_0 1.99GB)
+       0p  128g  t=4   ngl=99     43.23 tok/s  (qwen2 3B Q4_0 1.99GB)
+== granite4.1-3b-q4_0  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    326.72 tok/s  (granite 3B Q4_0 1.98GB)
+       0p  128g  t=4   ngl=99     36.89 tok/s  (granite 3B Q4_0 1.98GB)
+== gemma4-e4b-q4_0  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    251.25 tok/s  (gemma4 E4B Q4_0 4.82GB)
+       0p  128g  t=4   ngl=99     24.73 tok/s  (gemma4 E4B Q4_0 4.82GB)
+### Q4_0 dual card 2026-09-22T17:16:08Z
+== qwen2.5-coder-14b-q4_0  t=4 ngl=99 p=512 n=128 r=2
+     512p    0g  t=4   ngl=99    109.13 tok/s  (qwen2 14B Q4_0 8.51GB)
+       0p  128g  t=4   ngl=99     13.80 tok/s  (qwen2 14B Q4_0 8.51GB)
+### coding on GPU: gpt-oss-20b (2 cards), 14B Q4_0 (2 cards), Granite Q4_0 (1 card) 2026-09-22T17:16:47Z
+== coding on gpt-oss-20b-mxfp4 via http://127.0.0.1:55873
+  PASS rle                      12.6s 
+  PASS is_balanced              13.3s 
+  PASS word_freq                13.5s 
+  PASS chunk                     9.5s 
+  PASS parse_kv                 18.0s 
+  PASS second_largest           17.9s 
+  PASS roman                    21.1s 
+  PASS ip_valid                 22.2s 
+  PASS cidr_contains            13.7s 
+  FAIL merge_intervals          26.3s NameError: name 'merge_intervals' is not defined
+  PASS flatten                  17.3s 
+  FAIL caesar                   26.5s SyntaxError: invalid syntax
+  PASS median                   15.7s 
+  PASS dedupe_keep_order        10.0s 
+  FAIL parse_syslog             26.4s NameError: name 'parse_syslog' is not defined
+  PASS top_n                    17.9s 
+  PASS bin_search               13.6s 
+  PASS hex_dump                 10.9s 
+  PASS fix_avg                  15.5s 
+  PASS fix_offbyone             19.5s 
+  PASS fix_mutable_default       9.9s 
+  PASS fix_strip_prefix         10.5s 
+score=0.864 n=22 median_latency=15.58s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x2/task-20260922T172300Z-coding-gpt-oss-20b-mxfp4.json
+== coding on qwen2.5-coder-14b-q4_0 via http://127.0.0.1:34763
+  PASS rle                      11.1s 
+  PASS is_balanced              12.4s 
+  PASS word_freq                11.6s 
+  PASS chunk                     9.0s 
+  FAIL parse_kv                 10.3s ValueError: too many values to unpack (expected 2)
+  PASS second_largest           10.2s 
+  PASS roman                    19.4s 
+  PASS ip_valid                 15.6s 
+  PASS cidr_contains             8.3s 
+  PASS merge_intervals          13.6s 
+  PASS flatten                   9.2s 
+  PASS caesar                   11.2s 
+  PASS median                   11.0s 
+  PASS dedupe_keep_order         8.7s 
+  FAIL parse_syslog             18.0s AssertionError
+  PASS top_n                     7.6s 
+  PASS bin_search               12.2s 
+  PASS hex_dump                  9.6s 
+  PASS fix_avg                   9.9s 
+  PASS fix_offbyone              8.8s 
+  PASS fix_mutable_default       8.0s 
+  PASS fix_strip_prefix          8.3s 
+score=0.909 n=22 median_latency=10.24s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x2/task-20260922T172712Z-coding-qwen2.5-coder-14b-q4_0.json
+== coding on granite4.1-3b-q4_0 via http://127.0.0.1:33827
+  PASS rle                       3.9s 
+  PASS is_balanced               4.6s 
+  PASS word_freq                 4.4s 
+  PASS chunk                     3.4s 
+  PASS parse_kv                  4.1s 
+  PASS second_largest            3.0s 
+  PASS roman                     6.1s 
+  PASS ip_valid                  4.2s 
+  FAIL cidr_contains             4.1s ValueError: invalid literal for int() with base 16: '10.0.0.
+  PASS merge_intervals           4.0s 
+  PASS flatten                   3.1s 
+  PASS caesar                    4.3s 
+  PASS median                    3.7s 
+  PASS dedupe_keep_order         3.0s 
+  FAIL parse_syslog              5.9s ValueError: invalid literal for int() with base 10: '1234]:'
+  PASS top_n                     2.9s 
+  PASS bin_search                4.6s 
+  PASS hex_dump                  2.5s 
+  PASS fix_avg                   3.4s 
+  PASS fix_offbyone              3.5s 
+  PASS fix_mutable_default       2.6s 
+  PASS fix_strip_prefix          3.0s 
+score=0.909 n=22 median_latency=3.8s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x1/task-20260922T172840Z-coding-granite4.1-3b-q4_0.json
+### done 2026-09-22T17:28:40Z
+1 hosts, 170 bench rows, 28 task runs -> README.md

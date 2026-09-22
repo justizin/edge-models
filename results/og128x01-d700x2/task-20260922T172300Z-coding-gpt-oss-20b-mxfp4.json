@@ -1,0 +1,191 @@
+{
+ "score": 0.864,
+ "n": 22,
+ "passed": 19,
+ "median_latency_s": 15.58,
+ "items": [
+  {
+   "id": "rle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 12.64,
+   "out_tokens": 216
+  },
+  {
+   "id": "is_balanced",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 13.29,
+   "out_tokens": 227
+  },
+  {
+   "id": "word_freq",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 13.53,
+   "out_tokens": 230
+  },
+  {
+   "id": "chunk",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.48,
+   "out_tokens": 136
+  },
+  {
+   "id": "parse_kv",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 18.01,
+   "out_tokens": 325
+  },
+  {
+   "id": "second_largest",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 17.92,
+   "out_tokens": 324
+  },
+  {
+   "id": "roman",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 21.14,
+   "out_tokens": 403
+  },
+  {
+   "id": "ip_valid",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 22.19,
+   "out_tokens": 407
+  },
+  {
+   "id": "cidr_contains",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 13.74,
+   "out_tokens": 217
+  },
+  {
+   "id": "merge_intervals",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'merge_intervals' is not defined",
+   "s": 26.32,
+   "out_tokens": 512
+  },
+  {
+   "id": "flatten",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 17.34,
+   "out_tokens": 325
+  },
+  {
+   "id": "caesar",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 26.47,
+   "out_tokens": 512
+  },
+  {
+   "id": "median",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 15.71,
+   "out_tokens": 280
+  },
+  {
+   "id": "dedupe_keep_order",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.98,
+   "out_tokens": 157
+  },
+  {
+   "id": "parse_syslog",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'parse_syslog' is not defined",
+   "s": 26.44,
+   "out_tokens": 512
+  },
+  {
+   "id": "top_n",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 17.85,
+   "out_tokens": 333
+  },
+  {
+   "id": "bin_search",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 13.55,
+   "out_tokens": 238
+  },
+  {
+   "id": "hex_dump",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.87,
+   "out_tokens": 168
+  },
+  {
+   "id": "fix_avg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 15.45,
+   "out_tokens": 267
+  },
+  {
+   "id": "fix_offbyone",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 19.46,
+   "out_tokens": 357
+  },
+  {
+   "id": "fix_mutable_default",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 9.87,
+   "out_tokens": 130
+  },
+  {
+   "id": "fix_strip_prefix",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 10.52,
+   "out_tokens": 161
+  }
+ ],
+ "task": "coding",
+ "model_id": "gpt-oss-20b-mxfp4",
+ "host": "og128x01-d700x2",
+ "threads": 4,
+ "ngl": 99,
+ "notes": "dual D700",
+ "date": "2026-09-22T17:23:00Z"
+}
