@@ -1,5 +1,6 @@
 # User unit: ~/.config/systemd/user/llama-coder-gpu.service
-# Granite 4.1-3B Q4_0 on FirePro D700 #0 via RADV. Needs the user in the 'render' group.
+# Granite 4.1-3B Q4_0 on FirePro D700 #0 via RADV. The user must be in the render group AND the user
+# systemd instance must have started after that (log out/in or reboot); SupplementaryGroups= is not allowed in user units.
 # systemctl --user daemon-reload && systemctl --user enable --now llama-coder-gpu
 [Unit]
 Description=llama-server coding assistant on D700 (edge-models)
@@ -10,7 +11,6 @@ Environment=LLAMA_BIN=%h/src/llama.cpp/build/bin
 Environment=GGML_VK_VISIBLE_DEVICES=0
 Environment=MODEL=%h/.cache/huggingface/hub/models--ibm-granite--granite-4.1-3b-GGUF/snapshots/main/granite-4.1-3b-Q4_0.gguf
 ExecStart=/bin/sh -c 'exec $LLAMA_BIN/llama-server -m $(ls $MODEL 2>/dev/null || ls %h/.cache/huggingface/hub/models--ibm-granite--granite-4.1-3b-GGUF/snapshots/*/granite-4.1-3b-Q4_0.gguf | head -1) --host 127.0.0.1 --port 8081 -t 4 -ngl 99 -ub 256 -fa off -c 8192 --jinja -np 1'
-SupplementaryGroups=render
 Restart=on-failure
 
 [Install]
