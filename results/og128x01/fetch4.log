@@ -1,2 +1,5 @@
 fetch  granite4.1-3b-q4_0 ibm-granite/granite-4.1-3b-GGUF/granite-4.1-3b-Q4_0.gguf
 Hint: The `hf-cli` skill is not installed. Run `hf skills add -g --claude` to teach your AI agents how to use the `hf` CLI.
+fetch  qwen2.5-coder-3b-q4_0 Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/qwen2.5-coder-3b-instruct-q4_0.gguf
+fetch  gemma4-e4b-q4_0 unsloth/gemma-4-E4B-it-GGUF/gemma-4-E4B-it-Q4_0.gguf
+fetch  qwen2.5-coder-14b-q4_0 Qwen/Qwen2.5-Coder-14B-Instruct-GGUF/qwen2.5-coder-14b-instruct-q4_0.gguf

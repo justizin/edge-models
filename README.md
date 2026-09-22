@@ -77,11 +77,16 @@ Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`)
 | og128x01-d700x1 | qwen3.5-4b-q4 | Q4_K_M 2.73 GB | 99 | 61.2 (t=4) | 24.7 (t=4) |
 | og128x01-d700x1 | qwen3.5-9b-q4 | Q4_K_M 5.67 GB | 99 | 32.6 (t=4) | 17.5 (t=4) |
 | og128x01-d700x1 | smollm2-360m-q8 | Q8_0 0.38 GB | 99 | 2027.4 (t=4) | 97.9 (t=4) |
+| og128x01-d700x1-noworkaround | qwen2.5-coder-3b-q4 | Q4_K_M 2.10 GB | 99 | 328.5 (t=4) | 39.8 (t=4) |
+| og128x01-d700x2 | gpt-oss-20b-mxfp4 | MXFP4 MoE 12.10 GB | 99 | 108.6 (t=4) | 23.0 (t=4) |
 | og128x01-d700x2 | qwen2.5-coder-14b-q4 | Q4_K_M 8.98 GB | 99 | 35.1 (t=4) | 9.4 (t=4) |
 | og128x01-d700x2 | qwen2.5-coder-7b-q4 | Q4_K_M 4.68 GB | 99 | 72.8 (t=4) | 14.4 (t=4) |
 | og128x01-d700x2 | qwen2.5-coder-7b-q4_0 | Q4_0 4.43 GB | 99 | 221.4 (t=4) | 24.3 (t=4) |
 | og128x01-d700x2 | qwen2.5-coder-7b-q8 | Q8_0 8.09 GB | 99 | 81.2 (t=4) | 16.4 (t=4) |
 | og128x01-d700x2 | qwen3.5-9b-q4 | Q4_K_M 5.67 GB | 99 | 52.4 (t=4) | 17.2 (t=4) |
+| og128x01-d700x2-ncmoe24 | gpt-oss-20b-mxfp4 | MXFP4 MoE 12.10 GB | 99 | 50.8 (t=24) | 8.9 (t=24) |
+| og128x01-d700x2-ncmoe36 | qwen3-coder-30b-a3b-q4 | Q4_K_M 17.66 GB | 99 | 13.7 (t=24) | 8.1 (t=24) |
+| og128x01-d700x2-ncmoe48 | qwen3-coder-30b-a3b-q4 | Q4_K_M 17.66 GB | 99 | 11.1 (t=24) | 6.9 (t=24) |
 
 ### Task scores
 

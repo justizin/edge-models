@@ -66,5 +66,13 @@ Setup: `sg render -c ...`, `-ngl 99 -ub 256 -fa off`, 4 CPU threads. `RADV_DEBUG
 - **The RADV DeviceLost bug (llama.cpp #19610) did not reproduce.** 2048-token prompts on the 3B ran clean with and without `RADV_DEBUG=novm,syncshaders,zerovram` (323 vs 329 tok/s). Kernel 6.12.107 + Mesa 25.0.7 appear unaffected; the reports were on kernel 6.19. Keep `-fa off` (fp16 flash-attention is unavailable anyway).
 - 30B-A3B MoE (17.7 GB) does not fit 12 GB; `-ncmoe` hybrid results in Phase 2b below.
 
-## Phase 2b follow-ups
-_see results/og128x01-d700x2-ncmoe*/ and the README table; summary to be added when the queue finishes_
+## Phase 2b follow-ups (2026-09-22)
+| experiment | result | verdict |
+|---|---|---|
+| 3B, 2048-token prompt, no `RADV_DEBUG` | 329 / 40 tok/s, no DeviceLost | workaround not needed on kernel 6.12 + Mesa 25.0.7 |
+| Qwen3-Coder-30B-A3B, experts on CPU (`-ncmoe 48`), attention on 2 GPUs | 11 / 6.9 | worse than pure CPU (41 / 11.5) |
+| same, `-ncmoe 36` | 13.7 / 8.1 | still worse; PCIe round trips per layer dominate |
+| gpt-oss-20b, `-ncmoe 24` hybrid | 51 / 8.9 | prompt up, generation down vs CPU (37 / 10.4) |
+| gpt-oss-20b fully on 2 GPUs (12.1 GB MXFP4) | **109 / 23** | fits; 2.2x CPU generation, best 20B-class number on this box |
+
+Conclusion: MoE offload only pays when the whole model fits in VRAM. The 30B-A3B coders stay on the CPU; gpt-oss-20b becomes a GPU model. Phase 2c adds Q4_0 rows for the 3B/4B/14B models and a GPU coding run for gpt-oss-20b.

@@ -4,3 +4,18 @@
        0p   64g  t=4   ngl=99     39.85 tok/s  (qwen2 3B Q4_K - Medium 2.10GB)
 ### 2. MoE hybrid: experts on CPU, rest on 2 GPUs 2026-09-22T17:07:05Z
 == qwen3-coder-30b-a3b-q4  t=24 ngl=99 p=512 n=128 r=2
+     512p    0g  t=24  ngl=99     11.09 tok/s  (qwen3moe 30B.A3B Q4_K - Medium 17.66GB)
+       0p  128g  t=24  ngl=99      6.92 tok/s  (qwen3moe 30B.A3B Q4_K - Medium 17.66GB)
+== qwen3-coder-30b-a3b-q4  t=24 ngl=99 p=512 n=128 r=2
+     512p    0g  t=24  ngl=99     13.74 tok/s  (qwen3moe 30B.A3B Q4_K - Medium 17.66GB)
+       0p  128g  t=24  ngl=99      8.11 tok/s  (qwen3moe 30B.A3B Q4_K - Medium 17.66GB)
+### 3. gpt-oss-20b hybrid 2026-09-22T17:12:56Z
+== gpt-oss-20b-mxfp4  t=24 ngl=99 p=512 n=128 r=2
+     512p    0g  t=24  ngl=99     50.82 tok/s  (gpt-oss 20B MXFP4 MoE 12.10GB)
+       0p  128g  t=24  ngl=99      8.91 tok/s  (gpt-oss 20B MXFP4 MoE 12.10GB)
+### 4. gpt-oss-20b fully on 2 GPUs (12.1 GB into 12 GB, expect spill) 2026-09-22T17:14:02Z
+== gpt-oss-20b-mxfp4  t=4 ngl=99 p=512 n=128 r=1
+     512p    0g  t=4   ngl=99    108.60 tok/s  (gpt-oss 20B MXFP4 MoE 12.10GB)
+       0p  128g  t=4   ngl=99     23.03 tok/s  (gpt-oss 20B MXFP4 MoE 12.10GB)
+### done 2026-09-22T17:14:27Z
+1 hosts, 162 bench rows, 25 task runs -> README.md
