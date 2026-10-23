@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run a task set (coding | ids) against llama-server's OpenAI-compatible API and record score + latency.
 usage:
-  bench_server.py --task coding --model-id qwen3.5-0.8b-q8 [--threads 12] [--ngl 0] [--limit N]
+  bench_server.py --task coding|coding-v2 --model-id qwen3.5-0.8b-q8 [--threads 12] [--ngl 0] [--limit N]
   bench_server.py --task ids --url http://127.0.0.1:8080 --model-id <label>      # use an already running server
 Spawns llama-server itself when --model-id or --model-path is given (stdlib only; no manifest needed for --model-path).
 Writes results/<host>/task-<stamp>-<task>-<model_id>.json"""
@@ -38,13 +38,14 @@ def chat(url, system, user, max_tokens, temperature=0.0):
     req = urllib.request.Request(url + "/v1/chat/completions", data=body, headers={"Content-Type": "application/json"})
     t = time.perf_counter(); r = json.load(urllib.request.urlopen(req, timeout=1800)); dt = time.perf_counter() - t
     return r["choices"][0]["message"]["content"], dt, r.get("usage", {})
-def run_coding(url, limit, log):
-    import problems, score
+def run_coding(url, limit, log, version="v1"):
+    import score
+    problems = __import__("problems_v2" if version == "v2" else "problems")
     items = problems.P[:limit] if limit else problems.P
     ok = 0; lat = []; per = []
     for p in items:
-        text, dt, usage = chat(url, score.SYSTEM, p["prompt"], 512)
-        code = score.extract_code(text); passed, err = score.run_tests(code, p["tests"], p["entry"])
+        text, dt, usage = chat(url, score.SYSTEM, p["prompt"], p.get("max_tokens", 512))
+        code = score.extract_code(text); passed, err = score.run_tests(code, p["tests"], p["entry"], timeout=p.get("timeout", 10))
         ok += passed; lat.append(dt); per.append(dict(id=p["id"], kind=p["kind"], passed=passed, err=err, s=round(dt, 2), out_tokens=usage.get("completion_tokens")))
         log(f"  {'PASS' if passed else 'FAIL'} {p['id']:<22} {dt:6.1f}s {'' if passed else err[:60]}")
     return dict(score=round(ok / len(items), 3), n=len(items), passed=ok, median_latency_s=round(statistics.median(lat), 2), items=per)
@@ -65,7 +66,7 @@ def run_ids(url, limit, log):
     return dict(score=m["f1"], n=len(rows), metrics=m, unparsed=unparsed, median_latency_s=round(statistics.median(lat), 3),
                 per_family_acc={k: round(v[0] / v[1], 2) for k, v in fam.items()}, items=per)
 def main():
-    a = argparse.ArgumentParser(); a.add_argument("--task", required=True, choices=["coding", "ids"])
+    a = argparse.ArgumentParser(); a.add_argument("--task", required=True, choices=["coding", "coding-v2", "ids"])
     a.add_argument("--model-id"); a.add_argument("--model-path"); a.add_argument("--url")
     a.add_argument("--threads", type=int, default=os.cpu_count()); a.add_argument("--ngl", type=int, default=0); a.add_argument("--ctx", type=int, default=4096)
     a.add_argument("--limit", type=int, default=0); a.add_argument("--notes", default=""); a.add_argument("--server-args", default="")
@@ -78,7 +79,8 @@ def main():
         proc, url = start_server(path, o.threads, o.ngl, o.ctx, o.server_args.split())
     print(f"== {o.task} on {mid} via {url}")
     try:
-        res = (run_coding if o.task == "coding" else run_ids)(url, o.limit, print)
+        if o.task == "ids": res = run_ids(url, o.limit, print)
+        else: res = run_coding(url, o.limit, print, version="v2" if o.task == "coding-v2" else "v1")
     finally:
         if proc: proc.terminate(); proc.wait(timeout=30)
     res.update(task=o.task, model_id=mid, host=host, threads=o.threads, ngl=o.ngl, notes=o.notes, date=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
