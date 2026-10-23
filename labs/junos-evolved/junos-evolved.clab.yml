@@ -1,0 +1,11 @@
+# containerlab topology: one cJunosEvolved node, enough to test the container packaging path.
+# Deploy:  containerlab deploy -t labs/junos-evolved/junos-evolved.clab.yml   (~5 min to boot)
+# Console: docker exec -ti clab-evo-evo1 cli        Shell: docker exec -ti clab-evo-evo1 bash   (admin / admin@123)
+# Destroy: containerlab destroy -t labs/junos-evolved/junos-evolved.clab.yml --cleanup
+name: evo
+topology:
+  nodes:
+    evo1:
+      kind: juniper_cjunosevolved
+      image: cjunosevolved:latest   # retag after docker load: docker tag <loaded image> cjunosevolved:latest
+      startup-config: startup.cfg

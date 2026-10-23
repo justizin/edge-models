@@ -1,5 +1,5 @@
 # Shared helpers. Source from bench scripts.
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+ROOT="${ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 HF_HOME="${HF_HOME:-$HOME/.cache/huggingface}"
 LLAMA_BIN="${LLAMA_BIN:-$HOME/src/llama.cpp/build/bin}"
 HOSTTAG="${HOSTTAG:-$(hostname -s)}"
