@@ -98,3 +98,9 @@ Conclusion: MoE offload only pays when the whole model fits in VRAM. The 30B-A3B
 - Coding assistant: **Granite 4.1-3B Q4_0 on one card** (37 tok/s, 0.91, 3.8 s/problem) for snappy completions; **Qwen2.5-Coder-14B Q4_0 across both cards** (13.8 tok/s, 0.91) when quality per answer matters more than speed. Qwen2.5-Coder-7B Q4_0 on one card sits between them (25 tok/s, 0.91, 4.5 s). Leave the 30B-A3B MoE on the CPU.
 - Log triage: same verdict as the CPU tier; the GPU only makes the wrong tool faster.
 - Serve with `deploy/xeon/llama-coder.service` variants: add `-ngl 99 -ub 256 -fa off`, run the unit with `SupplementaryGroups=render`, and set `GGML_VK_VISIBLE_DEVICES=0` for single-card units.
+
+## Serving (enabled 2026-10-23)
+
+`deploy/xeon/llama-coder-gpu.service` is enabled as a user unit on og128x01 (`systemctl --user enable --now llama-coder-gpu`; the user instance already carried the `render` group and lingering is on, so it survives logout and reboot). Granite 4.1-3B Q4_0 on the first Vulkan device (`GGML_VK_VISIBLE_DEVICES=0`, which is DRM `card1`: 3.0 GB of its VRAM in use while serving, card0 idle), OpenAI-compatible API at `http://127.0.0.1:8081/v1`, 8192 context, one slot.
+
+Smoke test the same day: `/health` answered within 4 s of start; a 54-token completion for a short docstring-to-function prompt came back correct in 2.0 s (26.5 tok/s end to end, including prompt processing). Nothing else uses card 0; Nomad's CPU-only llama.cpp job on this host is unaffected. The fleet-level version of this (a Vulkan engine job in outpost) is tracked at https://github.com/justizin/outpost/issues/10.
