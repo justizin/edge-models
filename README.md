@@ -5,7 +5,7 @@ Old x86 CPUs, pre-ROCm AMD GPUs, Raspberry Pis, iPhones, and the Linux/BSD contr
 
 Two tasks are measured on every tier: a **simple coding assistant** and **intrusion-detection / log triage** (with classical baselines, because LLMs are usually the wrong tool for that job).
 
-Plan: `~/.claude/plans/scalable-juggling-dijkstra.md`. Hardware on hand: `docs/inventory.md`.
+Roadmap and open work: `docs/roadmap.md` (tracked as [issues](https://github.com/justizin/edge-models/issues)). Hardware on hand: `docs/inventory.md`.
 
 ## Layout
 
