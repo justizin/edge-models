@@ -1,0 +1,199 @@
+{
+ "score": 0.0,
+ "n": 23,
+ "passed": 0,
+ "median_latency_s": 11.59,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 204.34,
+   "out_tokens": 254
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 52.8,
+   "out_tokens": 127
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 41.25,
+   "out_tokens": 99
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'list' object is not callable",
+   "s": 25.06,
+   "out_tokens": 214
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 13.81,
+   "out_tokens": 256
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'DEFAULT'",
+   "s": 20.26,
+   "out_tokens": 384
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "ImportError: cannot import name 'ip_networks' from 'ipaddress' (/usr/lib/python3.13/ipaddress.py). Did you mean: 'ip_network'?",
+   "s": 5.08,
+   "out_tokens": 88
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: invalid literal for int() with base 10: '*'",
+   "s": 12.41,
+   "out_tokens": 228
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'user'",
+   "s": 7.79,
+   "out_tokens": 141
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 9.2,
+   "out_tokens": 167
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 7.97,
+   "out_tokens": 137
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 9.61,
+   "out_tokens": 175
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 18.97,
+   "out_tokens": 353
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 5.84,
+   "out_tokens": 99
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 12.88,
+   "out_tokens": 236
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Malformed expression",
+   "s": 11.59,
+   "out_tokens": 211
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 11.97,
+   "out_tokens": 223
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "ValueError: Page number exceeds the total number of pages.",
+   "s": 16.48,
+   "out_tokens": 131
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: can't subtract offset-naive and offset-aware datetimes",
+   "s": 6.91,
+   "out_tokens": 76
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 4.94,
+   "out_tokens": 84
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 3.38,
+   "out_tokens": 48
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "RuntimeError: dictionary changed size during iteration",
+   "s": 4.22,
+   "out_tokens": 65
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: retry() got an unexpected keyword argument 'on_error'",
+   "s": 6.08,
+   "out_tokens": 101
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen2.5-coder-1.5b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "llama.cpp 0a1ef309c",
+ "date": "2026-10-23T21:26:35Z"
+}

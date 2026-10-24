@@ -1,0 +1,199 @@
+{
+ "score": 0.13,
+ "n": 23,
+ "passed": 3,
+ "median_latency_s": 11.61,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 12.44,
+   "out_tokens": 205
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 10.18,
+   "out_tokens": 169
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 6.88,
+   "out_tokens": 89
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'str' object is not callable",
+   "s": 18.68,
+   "out_tokens": 343
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "IndexError: list index out of range",
+   "s": 16.44,
+   "out_tokens": 248
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "UnboundLocalError: cannot access local variable 'ref_key' where it is not associated with a value",
+   "s": 15.77,
+   "out_tokens": 279
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: first and last must be IP addresses, not networks",
+   "s": 5.95,
+   "out_tokens": 69
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: invalid literal for int() with base 10: '*'",
+   "s": 18.75,
+   "out_tokens": 351
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 11.75,
+   "out_tokens": 197
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 12.6,
+   "out_tokens": 211
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 9.97,
+   "out_tokens": 163
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 14.77,
+   "out_tokens": 269
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 14.47,
+   "out_tokens": 261
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 12.67,
+   "out_tokens": 224
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 5.31,
+   "out_tokens": 64
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 28.0,
+   "out_tokens": 537
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: ' name '",
+   "s": 11.61,
+   "out_tokens": 193
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError: 4",
+   "s": 10.46,
+   "out_tokens": 124
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 8.28,
+   "out_tokens": 71
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 7.95,
+   "out_tokens": 95
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 8.33,
+   "out_tokens": 85
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: '<=' not supported between instances of 'dict' and 'int'",
+   "s": 7.46,
+   "out_tokens": 85
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 11.34,
+   "out_tokens": 124
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen2.5-coder-7b-q4_0",
+ "host": "og128x01-d700x1",
+ "threads": 4,
+ "ngl": 99,
+ "notes": "single D700; llama.cpp 0a1ef309c",
+ "date": "2026-10-23T20:50:32Z"
+}

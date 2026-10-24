@@ -1,0 +1,199 @@
+{
+ "score": 0.087,
+ "n": 23,
+ "passed": 2,
+ "median_latency_s": 21.52,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 30.8,
+   "out_tokens": 278
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 24.06,
+   "out_tokens": 216
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'id'",
+   "s": 18.29,
+   "out_tokens": 166
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'list' object is not callable",
+   "s": 44.23,
+   "out_tokens": 410
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 34.5,
+   "out_tokens": 242
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Key root not found in section app",
+   "s": 61.33,
+   "out_tokens": 571
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 25.82,
+   "out_tokens": 238
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: invalid literal for int() with base 10: '*'",
+   "s": 31.07,
+   "out_tokens": 288
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 21.52,
+   "out_tokens": 196
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Cycle detected in dependencies",
+   "s": 23.41,
+   "out_tokens": 213
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 15.21,
+   "out_tokens": 136
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 20.46,
+   "out_tokens": 180
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "IndexError: list index out of range",
+   "s": 36.37,
+   "out_tokens": 329
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: '<' not supported between instances of 'tuple' and 'list'",
+   "s": 21.51,
+   "out_tokens": 197
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 14.02,
+   "out_tokens": 124
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 33.14,
+   "out_tokens": 307
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 29.92,
+   "out_tokens": 274
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError: 4",
+   "s": 13.34,
+   "out_tokens": 112
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": false,
+   "err": "ModuleNotFoundError: No module named 'dateutil'",
+   "s": 7.76,
+   "out_tokens": 58
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 10.18,
+   "out_tokens": 83
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 11.09,
+   "out_tokens": 91
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: '<=' not supported between instances of 'dict' and 'int'",
+   "s": 8.53,
+   "out_tokens": 67
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: retry() got an unexpected keyword argument 'on_error'",
+   "s": 16.16,
+   "out_tokens": 135
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "granite4.1-3b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "llama.cpp 0a1ef309c",
+ "date": "2026-10-23T21:43:11Z"
+}

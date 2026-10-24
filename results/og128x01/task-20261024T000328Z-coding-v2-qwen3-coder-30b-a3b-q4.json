@@ -1,0 +1,199 @@
+{
+ "score": 0.304,
+ "n": 23,
+ "passed": 7,
+ "median_latency_s": 50.28,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 69.58,
+   "out_tokens": 455
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 29.12,
+   "out_tokens": 171
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 30.96,
+   "out_tokens": 185
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'str' object is not callable",
+   "s": 62.65,
+   "out_tokens": 355
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 53.5,
+   "out_tokens": 334
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 73.88,
+   "out_tokens": 496
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 125.29,
+   "out_tokens": 798
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 68.65,
+   "out_tokens": 457
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 44.48,
+   "out_tokens": 288
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 73.11,
+   "out_tokens": 501
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 46.62,
+   "out_tokens": 314
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 46.65,
+   "out_tokens": 310
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 50.28,
+   "out_tokens": 336
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 64.58,
+   "out_tokens": 448
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 66.08,
+   "out_tokens": 457
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Unexpected token: *",
+   "s": 120.33,
+   "out_tokens": 762
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 63.67,
+   "out_tokens": 434
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "ValueError: Page number exceeds total pages",
+   "s": 26.8,
+   "out_tokens": 135
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 18.62,
+   "out_tokens": 71
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 20.13,
+   "out_tokens": 93
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 34.38,
+   "out_tokens": 204
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 47.2,
+   "out_tokens": 291
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 31.23,
+   "out_tokens": 162
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen3-coder-30b-a3b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "llama.cpp 0a1ef309c",
+ "date": "2026-10-24T00:03:28Z"
+}

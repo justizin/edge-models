@@ -1,0 +1,199 @@
+{
+ "score": 0.652,
+ "n": 23,
+ "passed": 15,
+ "median_latency_s": 144.61,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 160.13,
+   "out_tokens": 717
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 62.52,
+   "out_tokens": 265
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 92.0,
+   "out_tokens": 383
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 144.93,
+   "out_tokens": 673
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 144.61,
+   "out_tokens": 661
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 214.36,
+   "out_tokens": 1003
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 177.57,
+   "out_tokens": 797
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError: 1-60",
+   "s": 175.58,
+   "out_tokens": 834
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 133.59,
+   "out_tokens": 638
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 160.4,
+   "out_tokens": 781
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 131.06,
+   "out_tokens": 574
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 211.55,
+   "out_tokens": 1024
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 210.1,
+   "out_tokens": 1024
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 217.18,
+   "out_tokens": 1024
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 173.38,
+   "out_tokens": 849
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 208.58,
+   "out_tokens": 1024
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": true,
+   "err": "  '| default:text' used when the value is missing. A missing value without a default raises KeyError. '\\{{' is a",
+   "s": 133.09,
+   "out_tokens": 598
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "ValueError: page 1 is out of range for 0 total pages",
+   "s": 48.33,
+   "out_tokens": 196
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 42.58,
+   "out_tokens": 159
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 28.58,
+   "out_tokens": 99
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 78.02,
+   "out_tokens": 349
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 39.88,
+   "out_tokens": 165
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 42.73,
+   "out_tokens": 171
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen3.6-35b-a3b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "llama.cpp 0a1ef309c",
+ "date": "2026-10-24T00:54:30Z"
+}

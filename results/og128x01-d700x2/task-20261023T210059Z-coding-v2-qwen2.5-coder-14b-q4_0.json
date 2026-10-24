@@ -1,0 +1,199 @@
+{
+ "score": 0.478,
+ "n": 23,
+ "passed": 11,
+ "median_latency_s": 25.37,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 27.42,
+   "out_tokens": 295
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 25.47,
+   "out_tokens": 257
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 14.88,
+   "out_tokens": 112
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'str' object is not callable",
+   "s": 21.07,
+   "out_tokens": 193
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 36.15,
+   "out_tokens": 345
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Reference cycle detected",
+   "s": 35.82,
+   "out_tokens": 380
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 11.34,
+   "out_tokens": 63
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Invalid value: 5/2",
+   "s": 45.75,
+   "out_tokens": 507
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: too many values to unpack (expected 2)",
+   "s": 19.93,
+   "out_tokens": 178
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError",
+   "s": 36.33,
+   "out_tokens": 381
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 26.9,
+   "out_tokens": 274
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 23.84,
+   "out_tokens": 237
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 43.58,
+   "out_tokens": 481
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 36.29,
+   "out_tokens": 392
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 25.37,
+   "out_tokens": 256
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "IndexError: pop from empty list",
+   "s": 47.74,
+   "out_tokens": 533
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: \"Key 'missing' not found in context\"",
+   "s": 30.6,
+   "out_tokens": 318
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "ValueError: Page number is out of range.",
+   "s": 20.12,
+   "out_tokens": 144
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 14.55,
+   "out_tokens": 71
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 14.91,
+   "out_tokens": 93
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "IndexError: list assignment index out of range",
+   "s": 15.72,
+   "out_tokens": 96
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 15.12,
+   "out_tokens": 98
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 20.07,
+   "out_tokens": 129
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen2.5-coder-14b-q4_0",
+ "host": "og128x01-d700x2",
+ "threads": 4,
+ "ngl": 99,
+ "notes": "dual D700; llama.cpp 0a1ef309c",
+ "date": "2026-10-23T21:00:59Z"
+}

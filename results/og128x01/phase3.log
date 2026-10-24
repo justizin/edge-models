@@ -1,0 +1,305 @@
+### coding-v2 GPU single card 2026-10-23T20:42:03Z
+== coding-v2 on granite4.1-3b-q4_0 via http://127.0.0.1:43945
+  FAIL lru_ttl                  10.2s AssertionError
+  FAIL token_bucket              6.4s AssertionError
+  FAIL merge_event_batches       4.5s AssertionError
+  FAIL undo_stack                9.1s AttributeError: 'Editor' object has no attribute '_save_stat
+  FAIL nginx_stats              11.5s AssertionError
+  FAIL ini_interp               14.2s KeyError: 'DEFAULT'
+  FAIL cidr_aggregate           13.2s ValueError: non-hexadecimal number found in fromhex() arg at
+  FAIL cron_field               13.0s ValueError: Invalid step */15
+  FAIL kv_log_query              6.8s AssertionError
+  FAIL toposort_cycle            9.3s KeyError: 'y'
+  FAIL schedule_rooms            6.2s ValueError: (0, 30) is not in list
+  PASS dijkstra_path             9.0s 
+  PASS diff_hunks               14.6s 
+  FAIL knapsack_items            9.4s AssertionError
+  FAIL glob_match               17.8s AssertionError
+  FAIL expr_eval                15.6s RecursionError: maximum recursion depth exceeded
+  FAIL template_render          12.2s KeyError: 'Missing value for placeholder:  name '
+  FAIL fix_pagination            5.1s AssertionError: 4
+  FAIL fix_naive_datetime        3.8s NameError: name 'datetime' is not defined. Did you forget to
+  FAIL fix_shared_state          4.6s AssertionError
+  PASS fix_float_money           5.5s 
+  FAIL fix_mutating_iteration    6.0s TypeError: '<=' not supported between instances of 'dict' an
+  FAIL refactor_retry_kwarg      6.0s SyntaxError: invalid syntax
+score=0.13 n=23 median_latency=9.05s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x1/task-20261023T204541Z-coding-v2-granite4.1-3b-q4_0.json
+== coding-v2 on qwen2.5-coder-7b-q4_0 via http://127.0.0.1:48759
+  FAIL lru_ttl                  12.4s AssertionError
+  PASS token_bucket             10.2s 
+  FAIL merge_event_batches       6.9s AssertionError
+  FAIL undo_stack               18.7s TypeError: 'str' object is not callable
+  FAIL nginx_stats              16.4s IndexError: list index out of range
+  FAIL ini_interp               15.8s UnboundLocalError: cannot access local variable 'ref_key' wh
+  FAIL cidr_aggregate            5.9s TypeError: first and last must be IP addresses, not networks
+  FAIL cron_field               18.8s ValueError: invalid literal for int() with base 10: '*'
+  FAIL kv_log_query             11.7s AssertionError
+  FAIL toposort_cycle           12.6s AssertionError
+  FAIL schedule_rooms           10.0s AssertionError
+  FAIL dijkstra_path            14.8s AssertionError
+  FAIL diff_hunks               14.5s AssertionError
+  FAIL knapsack_items           12.7s AssertionError
+  FAIL glob_match                5.3s AssertionError
+  FAIL expr_eval                28.0s AssertionError
+  FAIL template_render          11.6s KeyError: ' name '
+  FAIL fix_pagination           10.5s AssertionError: 4
+  PASS fix_naive_datetime        8.3s 
+  PASS fix_shared_state          8.0s 
+  FAIL fix_float_money           8.3s AssertionError
+  FAIL fix_mutating_iteration    7.5s TypeError: '<=' not supported between instances of 'dict' an
+  FAIL refactor_retry_kwarg     11.3s AssertionError
+score=0.13 n=23 median_latency=11.61s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x1/task-20261023T205032Z-coding-v2-qwen2.5-coder-7b-q4_0.json
+### coding-v2 GPU both cards 2026-10-23T20:50:32Z
+== coding-v2 on qwen2.5-coder-14b-q4_0 via http://127.0.0.1:48959
+  PASS lru_ttl                  27.4s 
+  PASS token_bucket             25.5s 
+  PASS merge_event_batches      14.9s 
+  FAIL undo_stack               21.1s TypeError: 'str' object is not callable
+  FAIL nginx_stats              36.1s AssertionError
+  FAIL ini_interp               35.8s ValueError: Reference cycle detected
+  PASS cidr_aggregate           11.3s 
+  FAIL cron_field               45.8s ValueError: Invalid value: 5/2
+  FAIL kv_log_query             19.9s ValueError: too many values to unpack (expected 2)
+  FAIL toposort_cycle           36.3s ValueError
+  FAIL schedule_rooms           26.9s AssertionError
+  PASS dijkstra_path            23.8s 
+  PASS diff_hunks               43.6s 
+  PASS knapsack_items           36.3s 
+  FAIL glob_match               25.4s AssertionError
+  FAIL expr_eval                47.7s IndexError: pop from empty list
+  FAIL template_render          30.6s KeyError: "Key 'missing' not found in context"
+  FAIL fix_pagination           20.1s ValueError: Page number is out of range.
+  PASS fix_naive_datetime       14.6s 
+  PASS fix_shared_state         14.9s 
+  FAIL fix_float_money          15.7s IndexError: list assignment index out of range
+  PASS fix_mutating_iteration   15.1s 
+  PASS refactor_retry_kwarg     20.1s 
+score=0.478 n=23 median_latency=25.37s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x2/task-20261023T210059Z-coding-v2-qwen2.5-coder-14b-q4_0.json
+== coding-v2 on gpt-oss-20b-mxfp4 via http://127.0.0.1:46231
+  FAIL lru_ttl                  50.4s NameError: name 'LRUCache' is not defined
+  PASS token_bucket             28.0s 
+  PASS merge_event_batches      35.4s 
+  FAIL undo_stack               50.1s SyntaxError: invalid syntax
+  PASS nginx_stats              40.9s 
+  FAIL ini_interp               50.8s SyntaxError: invalid syntax
+  FAIL cidr_aggregate           50.3s NameError: name 'aggregate' is not defined
+  FAIL cron_field               50.2s NameError: name 'expand' is not defined
+  FAIL kv_log_query             50.4s SyntaxError: invalid syntax
+  PASS toposort_cycle           47.1s 
+  PASS schedule_rooms           35.2s 
+  FAIL dijkstra_path            50.1s SyntaxError: invalid syntax
+  FAIL diff_hunks               50.2s SyntaxError: invalid syntax
+  FAIL knapsack_items           50.2s NameError: name 'best_subset' is not defined
+  FAIL glob_match               50.1s SyntaxError: invalid syntax
+  FAIL expr_eval                50.2s NameError: name 'evaluate' is not defined
+  FAIL template_render          50.3s SyntaxError: invalid syntax
+  FAIL fix_pagination           19.9s ValueError: page number out of range
+  PASS fix_naive_datetime       18.5s 
+  FAIL fix_shared_state         50.5s NameError: name 'Counter' is not defined
+  FAIL fix_float_money          49.6s NameError: name 'split_amount' is not defined
+  FAIL fix_mutating_iteration   27.7s AssertionError
+  FAIL refactor_retry_kwarg     34.1s AssertionError
+score=0.261 n=23 median_latency=50.09s -> /home/sneakernaut/src/claude/edge-models/results/og128x01-d700x2/task-20261023T211754Z-coding-v2-gpt-oss-20b-mxfp4.json
+### coding-v2 CPU 24 threads 2026-10-23T21:17:54Z
+== coding-v2 on qwen2.5-coder-1.5b-q4 via http://127.0.0.1:47969
+  FAIL lru_ttl                 204.3s AssertionError
+  FAIL token_bucket             52.8s AssertionError
+  FAIL merge_event_batches      41.2s AssertionError
+  FAIL undo_stack               25.1s TypeError: 'list' object is not callable
+  FAIL nginx_stats              13.8s AssertionError
+  FAIL ini_interp               20.3s KeyError: 'DEFAULT'
+  FAIL cidr_aggregate            5.1s ImportError: cannot import name 'ip_networks' from 'ipaddres
+  FAIL cron_field               12.4s ValueError: invalid literal for int() with base 10: '*'
+  FAIL kv_log_query              7.8s KeyError: 'user'
+  FAIL toposort_cycle            9.2s AssertionError
+  FAIL schedule_rooms            8.0s AssertionError
+  FAIL dijkstra_path             9.6s AssertionError
+  FAIL diff_hunks               19.0s AssertionError
+  FAIL knapsack_items            5.8s AssertionError
+  FAIL glob_match               12.9s AssertionError
+  FAIL expr_eval                11.6s ValueError: Malformed expression
+  FAIL template_render          12.0s AssertionError
+  FAIL fix_pagination           16.5s ValueError: Page number exceeds the total number of pages.
+  FAIL fix_naive_datetime        6.9s TypeError: can't subtract offset-naive and offset-aware date
+  FAIL fix_shared_state          4.9s AssertionError
+  FAIL fix_float_money           3.4s AssertionError
+  FAIL fix_mutating_iteration    4.2s RuntimeError: dictionary changed size during iteration
+  FAIL refactor_retry_kwarg      6.1s TypeError: retry() got an unexpected keyword argument 'on_er
+score=0.0 n=23 median_latency=11.59s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261023T212635Z-coding-v2-qwen2.5-coder-1.5b-q4.json
+== coding-v2 on qwen2.5-coder-3b-q4 via http://127.0.0.1:54635
+  FAIL lru_ttl                  24.3s AssertionError
+  FAIL token_bucket             14.8s AttributeError: 'TokenBucket' object has no attribute 'clock
+  FAIL merge_event_batches       8.4s ValueError: {'ts': 5, 'id': 'x', 'data': 1} is not in list
+  FAIL undo_stack               33.4s TypeError: 'str' object is not callable
+  PASS nginx_stats              20.1s 
+  FAIL ini_interp               23.5s KeyError: 'DEFAULT'
+  FAIL cidr_aggregate           12.6s AssertionError
+  FAIL cron_field               22.1s ValueError: invalid literal for int() with base 10: '*'
+  FAIL kv_log_query             14.9s AssertionError
+  FAIL toposort_cycle           24.6s ValueError: Cycle detected: a
+  FAIL schedule_rooms           18.7s AssertionError
+  FAIL dijkstra_path            23.4s NameError: name 'heapq' is not defined. Did you mean: 'help'
+  FAIL diff_hunks               23.1s IndexError: list index out of range
+  FAIL knapsack_items           18.4s AssertionError
+  FAIL glob_match               16.7s AssertionError
+  FAIL expr_eval                43.3s IndexError: pop from empty list
+  FAIL template_render          28.8s KeyError: 'Missing value for key:  name '
+  FAIL fix_pagination           14.2s AssertionError: 0
+  PASS fix_naive_datetime        8.1s 
+  FAIL fix_shared_state         10.1s AssertionError
+  FAIL fix_float_money           8.1s AssertionError
+  FAIL fix_mutating_iteration    7.8s TypeError: '<=' not supported between instances of 'dict' an
+  FAIL refactor_retry_kwarg     13.3s AssertionError
+score=0.087 n=23 median_latency=18.37s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261023T213353Z-coding-v2-qwen2.5-coder-3b-q4.json
+== coding-v2 on granite4.1-3b-q4 via http://127.0.0.1:59729
+  PASS lru_ttl                  30.8s 
+  FAIL token_bucket             24.1s AssertionError
+  FAIL merge_event_batches      18.3s KeyError: 'id'
+  FAIL undo_stack               44.2s TypeError: 'list' object is not callable
+  FAIL nginx_stats              34.5s AssertionError
+  FAIL ini_interp               61.3s ValueError: Key root not found in section app
+  FAIL cidr_aggregate           25.8s AssertionError
+  FAIL cron_field               31.1s ValueError: invalid literal for int() with base 10: '*'
+  FAIL kv_log_query             21.5s AssertionError
+  FAIL toposort_cycle           23.4s ValueError: Cycle detected in dependencies
+  FAIL schedule_rooms           15.2s AssertionError
+  PASS dijkstra_path            20.5s 
+  FAIL diff_hunks               36.4s IndexError: list index out of range
+  FAIL knapsack_items           21.5s TypeError: '<' not supported between instances of 'tuple' an
+  FAIL glob_match               14.0s AssertionError
+  FAIL expr_eval                33.1s AssertionError
+  FAIL template_render          29.9s AssertionError
+  FAIL fix_pagination           13.3s AssertionError: 4
+  FAIL fix_naive_datetime        7.8s ModuleNotFoundError: No module named 'dateutil'
+  FAIL fix_shared_state         10.2s AssertionError
+  FAIL fix_float_money          11.1s AssertionError
+  FAIL fix_mutating_iteration    8.5s TypeError: '<=' not supported between instances of 'dict' an
+  FAIL refactor_retry_kwarg     16.2s TypeError: retry() got an unexpected keyword argument 'on_er
+score=0.087 n=23 median_latency=21.52s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261023T214311Z-coding-v2-granite4.1-3b-q4.json
+== coding-v2 on qwen3.5-4b-q4 via http://127.0.0.1:52109
+  FAIL lru_ttl                 116.8s AssertionError
+  FAIL token_bucket             56.9s AssertionError
+  PASS merge_event_batches      79.5s 
+  FAIL undo_stack              174.0s TypeError: 'list' object is not callable
+  FAIL nginx_stats             140.4s AssertionError
+  FAIL ini_interp              156.1s AssertionError
+  FAIL cidr_aggregate          184.6s TypeError: aggregate.<locals>.merge_networks() takes 1 posit
+  PASS cron_field              405.6s 
+  FAIL kv_log_query            184.5s AssertionError
+  FAIL toposort_cycle          171.3s AssertionError: Cycle detected: a -> b -> c -> c
+  FAIL schedule_rooms          189.3s SyntaxError: invalid syntax
+  FAIL dijkstra_path            65.0s AssertionError
+  FAIL diff_hunks              270.4s SyntaxError: invalid syntax
+  PASS knapsack_items          255.1s 
+  FAIL glob_match              137.6s IndexError: string index out of range
+  FAIL expr_eval               200.0s SyntaxError: invalid syntax
+  FAIL template_render         161.7s KeyError: '{ name '
+  FAIL fix_pagination           31.4s AssertionError: 4
+  PASS fix_naive_datetime       19.7s 
+  PASS fix_shared_state         20.4s 
+  FAIL fix_float_money          30.7s AssertionError
+  FAIL fix_mutating_iteration   16.1s TypeError: '<=' not supported between instances of 'dict' an
+  FAIL refactor_retry_kwarg     35.8s AssertionError
+score=0.217 n=23 median_latency=140.4s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261023T223501Z-coding-v2-qwen3.5-4b-q4.json
+== coding-v2 on qwen2.5-coder-7b-q4 via http://127.0.0.1:50881
+  FAIL lru_ttl                  55.4s AssertionError
+  PASS token_bucket             37.3s 
+  FAIL merge_event_batches      23.1s AssertionError
+  FAIL undo_stack               74.1s TypeError: 'str' object is not callable
+  FAIL nginx_stats              54.8s IndexError: list index out of range
+  FAIL ini_interp               64.6s AssertionError
+  FAIL cidr_aggregate           17.8s TypeError: first and last must be IP addresses, not networks
+  FAIL cron_field               37.4s ValueError: invalid literal for int() with base 10: '*'
+  FAIL kv_log_query             39.0s NameError: name 'line_dict' is not defined
+  FAIL toposort_cycle           46.7s AssertionError
+  FAIL schedule_rooms           36.3s AssertionError
+  FAIL dijkstra_path            60.5s AssertionError
+  FAIL diff_hunks               60.1s AssertionError
+  PASS knapsack_items           45.4s 
+  FAIL glob_match               19.2s AssertionError
+  FAIL expr_eval               117.9s IndexError: string index out of range
+  FAIL template_render          55.2s AssertionError
+  FAIL fix_pagination           29.5s AssertionError: 4
+  PASS fix_naive_datetime       17.7s 
+  PASS fix_shared_state         23.2s 
+  FAIL fix_float_money          22.4s AssertionError
+  FAIL fix_mutating_iteration   19.4s TypeError: '<=' not supported between instances of 'dict' an
+  FAIL refactor_retry_kwarg     30.4s TypeError: retry() got an unexpected keyword argument 'max_d
+score=0.174 n=23 median_latency=37.44s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261023T225137Z-coding-v2-qwen2.5-coder-7b-q4.json
+== coding-v2 on qwen3.5-9b-q4 via http://127.0.0.1:50303
+  PASS lru_ttl                 142.1s 
+  PASS token_bucket             53.2s 
+  FAIL merge_event_batches     104.8s AssertionError
+  FAIL undo_stack              128.2s AssertionError
+  FAIL nginx_stats             137.8s AssertionError
+  FAIL ini_interp              222.8s AssertionError
+  FAIL cidr_aggregate          303.6s SyntaxError: invalid syntax
+  PASS cron_field              175.7s 
+  PASS kv_log_query            161.4s 
+  PASS toposort_cycle          252.1s 
+  PASS schedule_rooms           95.2s 
+  PASS dijkstra_path            81.3s 
+  FAIL diff_hunks              139.8s AssertionError
+  FAIL knapsack_items          191.2s AssertionError
+  FAIL glob_match              143.8s AssertionError
+  FAIL expr_eval               288.0s ValueError: Unexpected operator: *
+  FAIL template_render         170.8s KeyError: ' name '
+  FAIL fix_pagination           45.1s AssertionError: 4
+  PASS fix_naive_datetime       25.8s 
+  PASS fix_shared_state         33.9s 
+  FAIL fix_float_money          32.6s AssertionError
+  FAIL fix_mutating_iteration   30.7s TypeError: '<=' not supported between instances of 'dict' an
+  FAIL refactor_retry_kwarg     47.6s TypeError: retry() got an unexpected keyword argument 'max_d
+score=0.391 n=23 median_latency=137.77s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261023T234155Z-coding-v2-qwen3.5-9b-q4.json
+== coding-v2 on qwen3-coder-30b-a3b-q4 via http://127.0.0.1:56793
+  PASS lru_ttl                  69.6s 
+  FAIL token_bucket             29.1s AssertionError
+  FAIL merge_event_batches      31.0s AssertionError
+  FAIL undo_stack               62.6s TypeError: 'str' object is not callable
+  FAIL nginx_stats              53.5s AssertionError
+  FAIL ini_interp               73.9s AssertionError
+  FAIL cidr_aggregate          125.3s AssertionError
+  FAIL cron_field               68.6s AssertionError
+  FAIL kv_log_query             44.5s AssertionError
+  PASS toposort_cycle           73.1s 
+  FAIL schedule_rooms           46.6s AssertionError
+  FAIL dijkstra_path            46.6s AssertionError
+  PASS diff_hunks               50.3s 
+  PASS knapsack_items           64.6s 
+  FAIL glob_match               66.1s AssertionError
+  FAIL expr_eval               120.3s ValueError: Unexpected token: *
+  FAIL template_render          63.7s AssertionError
+  FAIL fix_pagination           26.8s ValueError: Page number exceeds total pages
+  PASS fix_naive_datetime       18.6s 
+  PASS fix_shared_state         20.1s 
+  FAIL fix_float_money          34.4s AssertionError
+  FAIL fix_mutating_iteration   47.2s AssertionError
+  PASS refactor_retry_kwarg     31.2s 
+score=0.304 n=23 median_latency=50.28s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261024T000328Z-coding-v2-qwen3-coder-30b-a3b-q4.json
+== coding-v2 on qwen3.6-35b-a3b-q4 via http://127.0.0.1:54997
+  PASS lru_ttl                 160.1s 
+  PASS token_bucket             62.5s 
+  PASS merge_event_batches      92.0s 
+  PASS undo_stack              144.9s 
+  PASS nginx_stats             144.6s 
+  FAIL ini_interp              214.4s AssertionError
+  PASS cidr_aggregate          177.6s 
+  FAIL cron_field              175.6s AssertionError: 1-60
+  PASS kv_log_query            133.6s 
+  PASS toposort_cycle          160.4s 
+  PASS schedule_rooms          131.1s 
+  FAIL dijkstra_path           211.5s SyntaxError: invalid syntax
+  FAIL diff_hunks              210.1s SyntaxError: invalid syntax
+  FAIL knapsack_items          217.2s SyntaxError: invalid syntax
+  FAIL glob_match              173.4s AssertionError
+  FAIL expr_eval               208.6s SyntaxError: invalid syntax
+  PASS template_render         133.1s 
+  FAIL fix_pagination           48.3s ValueError: page 1 is out of range for 0 total pages
+  PASS fix_naive_datetime       42.6s 
+  PASS fix_shared_state         28.6s 
+  PASS fix_float_money          78.0s 
+  PASS fix_mutating_iteration   39.9s 
+  PASS refactor_retry_kwarg     42.7s 
+score=0.652 n=23 median_latency=144.61s -> /home/sneakernaut/src/claude/edge-models/results/og128x01/task-20261024T005430Z-coding-v2-qwen3.6-35b-a3b-q4.json
+### done 2026-10-24T00:54:30Z
+1 hosts, 182 bench rows, 40 task runs -> README.md

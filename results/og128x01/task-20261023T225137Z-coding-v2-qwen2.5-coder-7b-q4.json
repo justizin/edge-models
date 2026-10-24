@@ -1,0 +1,199 @@
+{
+ "score": 0.174,
+ "n": 23,
+ "passed": 4,
+ "median_latency_s": 37.44,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 55.39,
+   "out_tokens": 254
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 37.28,
+   "out_tokens": 169
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 23.11,
+   "out_tokens": 101
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'str' object is not callable",
+   "s": 74.1,
+   "out_tokens": 317
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "IndexError: list index out of range",
+   "s": 54.81,
+   "out_tokens": 254
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 64.64,
+   "out_tokens": 299
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: first and last must be IP addresses, not networks",
+   "s": 17.78,
+   "out_tokens": 73
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: invalid literal for int() with base 10: '*'",
+   "s": 37.44,
+   "out_tokens": 170
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'line_dict' is not defined",
+   "s": 39.02,
+   "out_tokens": 177
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 46.74,
+   "out_tokens": 211
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 36.26,
+   "out_tokens": 163
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 60.54,
+   "out_tokens": 277
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 60.05,
+   "out_tokens": 275
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 45.38,
+   "out_tokens": 206
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 19.23,
+   "out_tokens": 82
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "IndexError: string index out of range",
+   "s": 117.85,
+   "out_tokens": 454
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 55.2,
+   "out_tokens": 251
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError: 4",
+   "s": 29.54,
+   "out_tokens": 124
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 17.74,
+   "out_tokens": 71
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 23.22,
+   "out_tokens": 96
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 22.41,
+   "out_tokens": 94
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: '<=' not supported between instances of 'dict' and 'int'",
+   "s": 19.42,
+   "out_tokens": 79
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: retry() got an unexpected keyword argument 'max_delay'",
+   "s": 30.38,
+   "out_tokens": 131
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen2.5-coder-7b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "llama.cpp 0a1ef309c",
+ "date": "2026-10-23T22:51:37Z"
+}

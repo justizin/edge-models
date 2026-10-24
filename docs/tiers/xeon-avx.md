@@ -71,6 +71,20 @@ The set saturates at 3B: five models tie within one problem of each other. A har
 - Where an LLM could still earn its place: explaining an alert, summarizing a burst, or handling log formats no rule anticipated. That is a different task and needs a different dataset (real loghub samples), which is the next IDS step.
 - Gemma 4 E2B originally logged ~10 s per line; a re-run on 2026-09-22 with identical settings gave the same F1 at 1.5 s/line, and a single request through llama-server takes 2.9 s cold. The first run's latency was a transient artifact (cause not identified; the anomalous result file was dropped). Its real problem is recall 0.41: it calls almost everything benign.
 
+### Coding task v2 (2026-10-23, 23 harder problems, llama.cpp b11796)
+| model | pass | s |
+|---|---|---|
+| Qwen3.6-35B-A3B | 0.65 | 145 |
+| Qwen3.5-9B | 0.39 | 138 |
+| Qwen3-Coder-30B-A3B | 0.30 | 50 |
+| Qwen3.5-4B | 0.22 | 140 |
+| Qwen2.5-Coder-7B | 0.17 | 37 |
+| Granite 4.1-3B | 0.09 | 22 |
+| Qwen2.5-Coder-3B | 0.09 | 18 |
+| Qwen2.5-Coder-1.5B | 0.00 | 12 |
+
+v2 (`docs/tasks/coding.md`) separates what v1 flattened. On this CPU the choice is now explicit: Qwen3.6-35B-A3B is twice as good as anything else on real component-sized tasks but takes over two minutes per answer at 24 threads; Qwen3-Coder-30B-A3B is the speed/quality compromise (0.30 at 50 s); the 3B models that looked like a sweet spot on v1 only handle boilerplate (0.09). Full table and analysis in the task doc.
+
 ## Recommendation for this tier
-- Coding assistant: **Qwen3-Coder-30B-A3B** if the box has the RAM (needs ~20 GB), else **Granite 4.1-3B** or **Qwen2.5-Coder-3B** (2 GB). Serve with `deploy/xeon/llama-coder.service`.
+- Coding assistant: **Qwen3-Coder-30B-A3B** if the box has the RAM (needs ~20 GB) for interactive use; **Qwen3.6-35B-A3B** (22 GB) when quality matters more than the 2-minute answers; else **Granite 4.1-3B** or **Qwen2.5-Coder-3B** (2 GB) for boilerplate only (v2: 0.09). Serve with `deploy/xeon/llama-coder.service`.
 - Log triage: run the stdlib rules + naive Bayes; reserve an LLM (Qwen3.5-4B) for explaining what the classifier flagged.

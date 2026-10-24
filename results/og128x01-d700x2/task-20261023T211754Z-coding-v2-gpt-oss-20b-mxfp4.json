@@ -1,0 +1,199 @@
+{
+ "score": 0.261,
+ "n": 23,
+ "passed": 6,
+ "median_latency_s": 50.09,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'LRUCache' is not defined",
+   "s": 50.43,
+   "out_tokens": 1024
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 27.97,
+   "out_tokens": 545
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 35.44,
+   "out_tokens": 703
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 50.12,
+   "out_tokens": 1024
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 40.88,
+   "out_tokens": 812
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 50.82,
+   "out_tokens": 1024
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'aggregate' is not defined",
+   "s": 50.33,
+   "out_tokens": 1024
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'expand' is not defined",
+   "s": 50.19,
+   "out_tokens": 1024
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 50.42,
+   "out_tokens": 1024
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 47.09,
+   "out_tokens": 956
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 35.24,
+   "out_tokens": 698
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 50.09,
+   "out_tokens": 1024
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 50.21,
+   "out_tokens": 1024
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'best_subset' is not defined",
+   "s": 50.24,
+   "out_tokens": 1024
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 50.08,
+   "out_tokens": 1024
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'evaluate' is not defined",
+   "s": 50.23,
+   "out_tokens": 1024
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 50.31,
+   "out_tokens": 1024
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "ValueError: page number out of range",
+   "s": 19.85,
+   "out_tokens": 353
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 18.54,
+   "out_tokens": 313
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": false,
+   "err": "NameError: name 'Counter' is not defined",
+   "s": 50.48,
+   "out_tokens": 1024
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "NameError: name 'split_amount' is not defined",
+   "s": 49.57,
+   "out_tokens": 1024
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 27.69,
+   "out_tokens": 539
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 34.14,
+   "out_tokens": 667
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "gpt-oss-20b-mxfp4",
+ "host": "og128x01-d700x2",
+ "threads": 4,
+ "ngl": 99,
+ "notes": "dual D700; llama.cpp 0a1ef309c",
+ "date": "2026-10-23T21:17:54Z"
+}

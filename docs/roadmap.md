@@ -20,10 +20,10 @@ What unblocks phases 3 to 5: for each device, the model, RAM, OS version, and ho
 
 | item | status | issue |
 |---|---|---|
-| static x86-64 llama.cpp build for switch control planes (`deploy/static/`) | in progress 2026-10-23 | [#5](https://github.com/justizin/edge-models/issues/5) |
-| Junos Evolved virtual lab (cJunosEvolved) to prove container packaging (`labs/junos-evolved/`) | needs KVM access on the host | [#6](https://github.com/justizin/edge-models/issues/6) |
-| coding task set v2 that separates the 3B / 7B / MoE models | in progress 2026-10-23 | [#7](https://github.com/justizin/edge-models/issues/7) |
-| GPU coder service on the Mac Pro (`deploy/xeon/llama-coder-gpu.service`) | in progress 2026-10-23 | [#8](https://github.com/justizin/edge-models/issues/8) |
+| static x86-64 llama.cpp build for switch control planes (`deploy/static/`) | done 2026-10-23 | [#5](https://github.com/justizin/edge-models/issues/5) |
+| Junos Evolved virtual lab (cJunosEvolved) to prove container packaging (`labs/junos-evolved/`) | scaffolding done; blocked on EULA download and host KVM access | [#6](https://github.com/justizin/edge-models/issues/6) |
+| coding task set v2 that separates the 3B / 7B / MoE models | done 2026-10-23 (`docs/tasks/coding.md`) | [#7](https://github.com/justizin/edge-models/issues/7) |
+| GPU coder service on the Mac Pro (`deploy/xeon/llama-coder-gpu.service`) | enabled 2026-10-23 | [#8](https://github.com/justizin/edge-models/issues/8) |
 | IDS task v2 on real log samples | open | [#9](https://github.com/justizin/edge-models/issues/9) |
 
 The fleet-level variant of the GPU service (a Nomad job in [justizin/outpost](https://github.com/justizin/outpost) using the `server-vulkan` image with `/dev/dri` passthrough) is tracked there.

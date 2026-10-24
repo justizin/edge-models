@@ -94,8 +94,18 @@ Conclusion: MoE offload only pays when the whole model fits in VRAM. The 30B-A3B
 - Q4_0 gives ~10% over Q4_K_M when the model fits comfortably, and 3x on prompt processing when it does not (14B). Rule for these cards: Q4_0 above ~4 GB, either below.
 - gpt-oss-20b is fast on the GPUs but its built-in reasoning burns the 512-token answer budget; it scores lower than on CPU and stays slow per problem. Not a fit for terse coding prompts without raising `max_tokens` or disabling reasoning.
 
+## Coding task v2 on the GPUs (2026-10-23)
+| model | config | v2 pass | median s |
+|---|---|---|---|
+| Qwen2.5-Coder-14B Q4_0 | 2 cards | **0.48** | 25 |
+| gpt-oss-20b MXFP4 | 2 cards | 0.26 | 50 |
+| Qwen2.5-Coder-7B Q4_0 | 1 card | 0.13 | 12 |
+| Granite 4.1-3B Q4_0 | 1 card | 0.13 | 9 |
+
+The 14B across both cards is the best coder this box can run at interactive speed: 0.48 on v2 in 25 s per problem, versus the CPU's Qwen3.6-35B-A3B at 0.65 in 145 s. gpt-oss-20b again spends its budget on reasoning (14 of 23 answers hit the 1024-token cap). The 3B single-card model that serves on port 8081 is a boilerplate assistant (0.13), not a component writer.
+
 ## Recommendation for this tier
-- Coding assistant: **Granite 4.1-3B Q4_0 on one card** (37 tok/s, 0.91, 3.8 s/problem) for snappy completions; **Qwen2.5-Coder-14B Q4_0 across both cards** (13.8 tok/s, 0.91) when quality per answer matters more than speed. Qwen2.5-Coder-7B Q4_0 on one card sits between them (25 tok/s, 0.91, 4.5 s). Leave the 30B-A3B MoE on the CPU.
+- Coding assistant: **Granite 4.1-3B Q4_0 on one card** (37 tok/s, v1 0.91 / v2 0.13, 3.8 s/problem) for snappy completions; **Qwen2.5-Coder-14B Q4_0 across both cards** (13.8 tok/s, v1 0.91 / v2 0.48) when quality per answer matters more than speed. Qwen2.5-Coder-7B Q4_0 on one card sits between them (25 tok/s, 0.91, 4.5 s). Leave the 30B-A3B MoE on the CPU.
 - Log triage: same verdict as the CPU tier; the GPU only makes the wrong tool faster.
 - Serve with `deploy/xeon/llama-coder.service` variants: add `-ngl 99 -ub 256 -fa off`, run the unit with `SupplementaryGroups=render`, and set `GGML_VK_VISIBLE_DEVICES=0` for single-card units.
 

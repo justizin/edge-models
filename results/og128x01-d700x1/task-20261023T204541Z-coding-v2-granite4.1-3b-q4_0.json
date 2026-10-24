@@ -1,0 +1,199 @@
+{
+ "score": 0.13,
+ "n": 23,
+ "passed": 3,
+ "median_latency_s": 9.05,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 10.2,
+   "out_tokens": 325
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 6.36,
+   "out_tokens": 139
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 4.49,
+   "out_tokens": 85
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "AttributeError: 'Editor' object has no attribute '_save_state'",
+   "s": 9.05,
+   "out_tokens": 234
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 11.49,
+   "out_tokens": 309
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'DEFAULT'",
+   "s": 14.23,
+   "out_tokens": 412
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: non-hexadecimal number found in fromhex() arg at position 5",
+   "s": 13.21,
+   "out_tokens": 348
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Invalid step */15",
+   "s": 13.01,
+   "out_tokens": 346
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 6.77,
+   "out_tokens": 160
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'y'",
+   "s": 9.28,
+   "out_tokens": 248
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: (0, 30) is not in list",
+   "s": 6.22,
+   "out_tokens": 113
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 9.03,
+   "out_tokens": 197
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 14.59,
+   "out_tokens": 392
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 9.38,
+   "out_tokens": 248
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 17.85,
+   "out_tokens": 534
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "RecursionError: maximum recursion depth exceeded",
+   "s": 15.58,
+   "out_tokens": 455
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'Missing value for placeholder:  name '",
+   "s": 12.25,
+   "out_tokens": 346
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError: 4",
+   "s": 5.07,
+   "out_tokens": 95
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": false,
+   "err": "NameError: name 'datetime' is not defined. Did you forget to import 'datetime'?",
+   "s": 3.75,
+   "out_tokens": 52
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 4.59,
+   "out_tokens": 83
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 5.52,
+   "out_tokens": 99
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: '<=' not supported between instances of 'dict' and 'int'",
+   "s": 5.96,
+   "out_tokens": 105
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 6.02,
+   "out_tokens": 123
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "granite4.1-3b-q4_0",
+ "host": "og128x01-d700x1",
+ "threads": 4,
+ "ngl": 99,
+ "notes": "single D700; llama.cpp 0a1ef309c",
+ "date": "2026-10-23T20:45:41Z"
+}

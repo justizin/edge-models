@@ -1,0 +1,199 @@
+{
+ "score": 0.391,
+ "n": 23,
+ "passed": 9,
+ "median_latency_s": 137.77,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 142.09,
+   "out_tokens": 474
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 53.22,
+   "out_tokens": 174
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 104.77,
+   "out_tokens": 356
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 128.2,
+   "out_tokens": 401
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 137.77,
+   "out_tokens": 463
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 222.78,
+   "out_tokens": 766
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "SyntaxError: invalid syntax",
+   "s": 303.58,
+   "out_tokens": 1024
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 175.66,
+   "out_tokens": 604
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 161.41,
+   "out_tokens": 552
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 252.11,
+   "out_tokens": 845
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 95.24,
+   "out_tokens": 323
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 81.28,
+   "out_tokens": 274
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 139.81,
+   "out_tokens": 484
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 191.16,
+   "out_tokens": 633
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 143.79,
+   "out_tokens": 494
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Unexpected operator: *",
+   "s": 288.01,
+   "out_tokens": 996
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: ' name '",
+   "s": 170.8,
+   "out_tokens": 590
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError: 4",
+   "s": 45.11,
+   "out_tokens": 127
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 25.83,
+   "out_tokens": 76
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 33.9,
+   "out_tokens": 104
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 32.56,
+   "out_tokens": 99
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: '<=' not supported between instances of 'dict' and 'int'",
+   "s": 30.71,
+   "out_tokens": 93
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: retry() got an unexpected keyword argument 'max_delay'",
+   "s": 47.61,
+   "out_tokens": 151
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen3.5-9b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "llama.cpp 0a1ef309c",
+ "date": "2026-10-23T23:41:55Z"
+}

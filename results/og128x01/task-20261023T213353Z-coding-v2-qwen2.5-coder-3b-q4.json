@@ -1,0 +1,199 @@
+{
+ "score": 0.087,
+ "n": 23,
+ "passed": 2,
+ "median_latency_s": 18.37,
+ "items": [
+  {
+   "id": "lru_ttl",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 24.29,
+   "out_tokens": 239
+  },
+  {
+   "id": "token_bucket",
+   "kind": "write",
+   "passed": false,
+   "err": "AttributeError: 'TokenBucket' object has no attribute 'clock'",
+   "s": 14.8,
+   "out_tokens": 144
+  },
+  {
+   "id": "merge_event_batches",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: {'ts': 5, 'id': 'x', 'data': 1} is not in list",
+   "s": 8.37,
+   "out_tokens": 77
+  },
+  {
+   "id": "undo_stack",
+   "kind": "write",
+   "passed": false,
+   "err": "TypeError: 'str' object is not callable",
+   "s": 33.37,
+   "out_tokens": 343
+  },
+  {
+   "id": "nginx_stats",
+   "kind": "write",
+   "passed": true,
+   "err": "",
+   "s": 20.09,
+   "out_tokens": 207
+  },
+  {
+   "id": "ini_interp",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'DEFAULT'",
+   "s": 23.52,
+   "out_tokens": 245
+  },
+  {
+   "id": "cidr_aggregate",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 12.64,
+   "out_tokens": 126
+  },
+  {
+   "id": "cron_field",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: invalid literal for int() with base 10: '*'",
+   "s": 22.09,
+   "out_tokens": 228
+  },
+  {
+   "id": "kv_log_query",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 14.94,
+   "out_tokens": 154
+  },
+  {
+   "id": "toposort_cycle",
+   "kind": "write",
+   "passed": false,
+   "err": "ValueError: Cycle detected: a",
+   "s": 24.58,
+   "out_tokens": 258
+  },
+  {
+   "id": "schedule_rooms",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 18.73,
+   "out_tokens": 188
+  },
+  {
+   "id": "dijkstra_path",
+   "kind": "write",
+   "passed": false,
+   "err": "NameError: name 'heapq' is not defined. Did you mean: 'help'? Or did you forget to import 'heapq'?",
+   "s": 23.38,
+   "out_tokens": 244
+  },
+  {
+   "id": "diff_hunks",
+   "kind": "write",
+   "passed": false,
+   "err": "IndexError: list index out of range",
+   "s": 23.08,
+   "out_tokens": 244
+  },
+  {
+   "id": "knapsack_items",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 18.37,
+   "out_tokens": 189
+  },
+  {
+   "id": "glob_match",
+   "kind": "write",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 16.69,
+   "out_tokens": 171
+  },
+  {
+   "id": "expr_eval",
+   "kind": "write",
+   "passed": false,
+   "err": "IndexError: pop from empty list",
+   "s": 43.35,
+   "out_tokens": 462
+  },
+  {
+   "id": "template_render",
+   "kind": "write",
+   "passed": false,
+   "err": "KeyError: 'Missing value for key:  name '",
+   "s": 28.84,
+   "out_tokens": 305
+  },
+  {
+   "id": "fix_pagination",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError: 0",
+   "s": 14.18,
+   "out_tokens": 141
+  },
+  {
+   "id": "fix_naive_datetime",
+   "kind": "fix",
+   "passed": true,
+   "err": "",
+   "s": 8.12,
+   "out_tokens": 71
+  },
+  {
+   "id": "fix_shared_state",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 10.14,
+   "out_tokens": 98
+  },
+  {
+   "id": "fix_float_money",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 8.13,
+   "out_tokens": 73
+  },
+  {
+   "id": "fix_mutating_iteration",
+   "kind": "fix",
+   "passed": false,
+   "err": "TypeError: '<=' not supported between instances of 'dict' and 'int'",
+   "s": 7.77,
+   "out_tokens": 70
+  },
+  {
+   "id": "refactor_retry_kwarg",
+   "kind": "fix",
+   "passed": false,
+   "err": "AssertionError",
+   "s": 13.32,
+   "out_tokens": 129
+  }
+ ],
+ "task": "coding-v2",
+ "model_id": "qwen2.5-coder-3b-q4",
+ "host": "og128x01",
+ "threads": 24,
+ "ngl": 0,
+ "notes": "llama.cpp 0a1ef309c",
+ "date": "2026-10-23T21:33:53Z"
+}

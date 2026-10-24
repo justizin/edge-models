@@ -319,7 +319,8 @@ assert render("plain", {}) == "plain"
 add("fix_pagination", '''
 # Bug report: "Page 2 of a 25-item list with page_size 10 shows items 10-19, which is right, but the last page
 # (page 3) is empty and total_pages says 2. Also page 0 or negative crashes with a slice error." Fix the function
-# below; keep its name and signature. Pages are 1-based; invalid page numbers should raise ValueError.
+# below; keep its name and signature. Pages are 1-based; a page below 1 or above total_pages raises ValueError.
+# An empty list has total_pages 1, and page 1 of it returns no items.
 def paginate(items: list, page: int, page_size: int) -> dict:
     """Return {'items': [...], 'page': page, 'total_pages': n}."""
     total_pages = len(items) // page_size
@@ -329,7 +330,7 @@ def paginate(items: list, page: int, page_size: int) -> dict:
 xs = list(range(25))
 assert paginate(xs, 3, 10) == {"items": [20, 21, 22, 23, 24], "page": 3, "total_pages": 3}
 assert paginate(xs, 2, 10)["items"] == list(range(10, 20))
-assert paginate([], 1, 10) == {"items": [], "page": 1, "total_pages": 1} or paginate([], 1, 10)["total_pages"] in (0, 1)
+assert paginate([], 1, 10) == {"items": [], "page": 1, "total_pages": 1}
 assert paginate(list(range(20)), 2, 10)["total_pages"] == 2
 for bad in (0, -1, 4):
     try: paginate(xs, bad, 10); assert False, bad
