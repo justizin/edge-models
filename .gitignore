@@ -7,3 +7,4 @@ deploy/static/out/
 deploy/junos/out/
 labs/junos-evolved/images/
 results/server.log
+learn/data/

@@ -21,8 +21,10 @@ Roadmap and open work: `docs/roadmap.md` (tracked as [issues](https://github.com
 | `docs/tiers/` | one note per hardware tier |
 | `deploy/` | per-platform deployment: systemd units, container/SWIX/IOx packaging |
 | `labs/` | virtual switch topologies (cEOS, N9Kv, vJunos) |
+| `learn/` | neural-network lessons, numpy and PyTorch side by side, leading to the IDS / adversarial exercises (`learn/README.md`) |
 
 Setup on the dev host: `~/.local/bin/uv venv .venv && uv pip install --python .venv/bin/python pyyaml "huggingface_hub[cli]" requests`.
+For the `learn/` lessons add: `uv pip install --python .venv/bin/python numpy scikit-learn matplotlib && uv pip install --python .venv/bin/python torch --index-url https://download.pytorch.org/whl/cpu`.
 Scripts find `llama-bench` at `$LLAMA_BIN` (default `~/src/llama.cpp/build/bin`) and models under `$HF_HOME`.
 
 ## Results

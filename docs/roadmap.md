@@ -25,5 +25,6 @@ What unblocks phases 3 to 5: for each device, the model, RAM, OS version, and ho
 | coding task set v2 that separates the 3B / 7B / MoE models | done 2026-10-23 (`docs/tasks/coding.md`) | [#7](https://github.com/justizin/edge-models/issues/7) |
 | GPU coder service on the Mac Pro (`deploy/xeon/llama-coder-gpu.service`) | enabled 2026-10-23 | [#8](https://github.com/justizin/edge-models/issues/8) |
 | IDS task v2 on real log samples | open | [#9](https://github.com/justizin/edge-models/issues/9) |
+| neural-network learning track: numpy + torch twins from a single neuron to flow IDS and adversarial examples (`learn/`) | batch 1 (lessons 01-04, 06) 2026-10-25 | |
 
 The fleet-level variant of the GPU service (a Nomad job in [justizin/outpost](https://github.com/justizin/outpost) using the `server-vulkan` image with `/dev/dri` passthrough) is tracked there.
